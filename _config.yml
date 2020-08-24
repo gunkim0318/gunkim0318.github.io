@@ -1,0 +1,58 @@
+# Site Info
+title: FunCoding
+tagline: "재밌는 코딩"
+description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
+baseurl: ""
+url: http://codinfox.github.io
+logo: "/public/logo.png"
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: "/blog/page:num"
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: GUN KIM
+  description: 세상엔 꼭 도움이 되는 것만 있진 않다. 하지만 도움이 될 지 모르니 일단 공부하자. 🧠
+  contact:
+    github: https://github.com/codinfox
+    # facebook:  <hide>
+    email: mailto:gunkim0318@gmail.com
+# Navigation (2nd level links supported)
+nav:
+  Home:
+    - "/"
+  Blog:
+    - "/blog/"
+    - { Categories: "/blog/categories/" }
+    - { Tags: "/blog/tags/" }
+  About:
+    - "/about/"
+  Github Project:
+    - "http://github.com/gunkim0318"
+
+# Where are tags and categories displayed
+tag_page: "/blog/tags/"
+category_page: "/blog/categories/"
+
+hero:
+  # image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: <b>오늘도 내일도 수고가 참 많았다.</b>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: "UA-00000000-1" # leave blank if you don't want google analytics
+disqus_short_name: "your_short_name" # leave blank if you don't want disqus
+
