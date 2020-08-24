@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 에러 페이지 적용하기
 category: Spring
-tag: [Spring]
+tag: [Spring Boot]
 ---
 
 # 개요

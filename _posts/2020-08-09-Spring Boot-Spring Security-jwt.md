@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트(Spring Boot) + 스프링 시큐리티(Spring Security) + JWT(Json Web Token) 연동하기
 category: Spring
-tag: [Spring]
+tag: [Spring Boot, Spring Security, Jwt]
 ---
 
 # 개요

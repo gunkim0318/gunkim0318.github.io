@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 실행 시 특정 코드 실행하기(테스트 데이터 넣기)
 category: Spring
-tag: [Spring]
+tag: [Spring Boot]
 ---
 
 # 개요

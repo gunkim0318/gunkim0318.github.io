@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 Mustache에서 유효성 검사하기(Validation)
 category: Spring
-tag: [Spring]
+tag: [Spring Boot]
 ---
 
 {% raw %}

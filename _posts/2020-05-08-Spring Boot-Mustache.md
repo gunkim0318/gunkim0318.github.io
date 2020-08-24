@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 머스테치 - 시큐리티 form 전송 시 403 에러 해결법
 category: Spring
-tag: [Spring]
+tag: [Spring Boot, Mustache]
 ---
 
 # 개요

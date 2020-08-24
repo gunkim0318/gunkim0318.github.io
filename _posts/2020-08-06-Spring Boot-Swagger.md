@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 스웨거(Swagger)를 이용하여 REST API문서 자동화하기
 category: Spring
-tag: [Spring]
+tag: [Spring Boot]
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91055366-86702700-e65f-11ea-828c-795ba0452b3e.png)

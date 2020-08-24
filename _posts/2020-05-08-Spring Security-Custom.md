@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 - 스프링 시큐리티 간단 커스텀
 category: Spring
-tag: [Spring]
+tag: [Spring Boot, Spring Security]
 ---
 
 # 스프링 시큐리티 흐름

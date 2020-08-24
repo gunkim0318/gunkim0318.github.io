@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 시큐리티 완벽 정리
 category: Spring
-tag: [Spring]
+tag: [Spring Boot, Spring Security]
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91024296-b6550580-e632-11ea-874f-8618094b21e5.png)

@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트 - Mustache 기본 값 지정하기
 category: Spring
-tag: [Spring]
+tag: [Spring Boot, Mustache]
 ---
 
 {% raw %}
