@@ -143,7 +143,7 @@ public class MemberController {
 
 - Validation 사용을 위해 MemberRequestDTO 앞에 @Validated 어노테이션을 붙여주었음.
 - 그냥 타임리프로 사용할 때는 그냥 errors를 그냥 넘겨서 뷰단에서 처리가 가능했는데, 나의 무지 때문인지 머스테치로는 그 방법을 알지 못해서 약간 꼼수로 error를 Map으로 바꿔서 필드 이름을 키, 에러 메세지를 값으로 만들어서 그 Map을 "error"이라는 애트리뷰트 이름으로 넘겨줌.
-- "비밀번호"와 "비밀번호 확인" 일치 여부를 확인하기 위해서 Validated를 사용해서 해결하고 싶었는데, 그런 방법이 떠오르지 않아 정말 안타깝지만 if문으로 비교해주었음. - 해결[https://gkup.tistory.com/15](https://gkup.tistory.com/15)
+- "비밀번호"와 "비밀번호 확인" 일치 여부를 확인하기 위해서 Validated를 사용해서 해결하고 싶었는데, 그런 방법이 떠오르지 않아 정말 안타깝지만 if문으로 비교해주었음. <- 이 부분은 해결했음. [포스트 보러가기](https://gunkim0318.github.io/spring/2020/07/18/Spring-Boot-Validations/)
 
 # signUp.mustache
 
