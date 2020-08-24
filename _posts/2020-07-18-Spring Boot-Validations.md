@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유효성 검증(Validation)을 커스텀하여 여러가지 항목에 대해 상호 검증하기
+title: 스프링 부트 유효성 검증(Validation)을 커스텀하여 여러가지 항목에 대해 상호 검증하기
 category: Spring
 tag: [Spring]
 ---
