@@ -34,10 +34,10 @@ author:
 nav:
   Home:
     - "/"
-  Blog:
-    - "/blog/"
-    - { Categories: "/blog/categories/" }
-    - { Tags: "/blog/tags/" }
+  Category:
+    - "/blog/categories/"
+  Tag:
+    - "/blog/tags/"
   About:
     - "/about/"
   Github Project:
