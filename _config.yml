@@ -1,9 +1,9 @@
 # Site Info
 title: FunCoding
 tagline: "재밌는 코딩"
-description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
+description: "codingfox테마를 이용하여 만든 깃허브 블로그입니다."
 baseurl: ""
-url: http://codinfox.github.io
+url: http://gunkim0318.github.io
 logo: "/public/logo.png"
 
 # Site configurations
@@ -27,7 +27,7 @@ author:
   name: GUN KIM
   description: 세상엔 꼭 도움이 되는 것만 있진 않다. 하지만 도움이 될 지 모르니 일단 공부하자. 🧠
   contact:
-    github: https://github.com/codinfox
+    github: https://github.com/gunkim0318
     # facebook:  <hide>
     email: mailto:gunkim0318@gmail.com
 # Navigation (2nd level links supported)
