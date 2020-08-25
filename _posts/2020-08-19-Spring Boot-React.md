@@ -82,7 +82,7 @@ compileJava.dependsOn(copyWebApp)
 
 gradle에서 Node 빌드를 하기 위한 플러그인 "com.moowork.node"을 추가해주었다.
 
-그리고 gradle 빌드 시 리액트 프로젝트 경로에서 "npm run bulid" 명령어가 실행되어 리액트 프로젝트가 빌드되도록 하고, 해당 빌드된 내용을 gradle 빌드에 포함시켰다.
+그리고 gradle 빌드 시 리액트 프로젝트 경로에서 "npm run bulid" 명령어가 실행되어 리액트 프로젝트가 빌드되도록 하고, 해당 빌드된 내용을 gradle빌드 된 스프링 부트 정적 콘텐츠 영역에 포함시켰다.
 
 ```java
 plugins {
