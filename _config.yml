@@ -40,8 +40,6 @@ nav:
     - "/blog/tags/"
   About:
     - "/about/"
-  Github Project:
-    - "http://github.com/gunkim0318"
 
 # Where are tags and categories displayed
 tag_page: "/blog/tags/"
