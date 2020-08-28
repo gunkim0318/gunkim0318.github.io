@@ -272,6 +272,76 @@ class Human(var name:String, var age: Int){
 
 **주 생성자 -> init 블록 -> 부 생성자**
 
+# Getter, Setter 생성
+
+자바에서는 Getter, Setter을 아래와 같이 생성한다.
+
+```java
+public static void main(String[] args) {
+    Human human = new Human("gunkim", 21);
+
+    System.out.println(human.getName()+", "+human.getAge()); //gunkim, 21
+    human.setName("kimgun");
+    human.setAge(18);
+    System.out.println(human.getName()+", "+human.getAge()); //kimgun, 18
+}
+```
+
+```java
+public class Human {
+    private String name;
+    private int age;
+
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+    public int getAge(){
+        return this.age;
+    }
+}
+```
+
+코틀린에서는 사실 자동으로 Setter와 Getter를 생성해준다. 아래와 같이 프로퍼티에 접근 하듯이 내부적으로 가져올 땐 getter를 호출하고, 값을 지정할 땐 setter를 호출하게 된다.
+
+```kotlin
+fun main(args:Array<String>){
+    var human = Human("gunkim", 21)
+
+    println("${human.name}, ${human.age}") //gunkim, 21
+    human.name = "kimgun"
+    human.age = 18
+    println("${human.name}, ${human.age}") //kimgun, 18
+}
+
+class Human constructor(var name: String, var age: Int)
+```
+
+## Getter, Setter를 직접 작성하기
+
+아래와 같이 getter,setter를 생성할 필드변수에 들여쓰기를 통해 선언해주면 된다.
+field라는 변수를 사용하는 이는 setter, getter를 생성할 해당 변수 주소값이 바인딩된다. 즉 여기서 field는 this.name이라고 보면 된다.
+
+```kotlin
+class Exam {
+    var name: String = ""
+        get() = if (field.length > 0) field else "name"
+        set (value) {
+            if (value.length > 0) field = value else ""
+        }
+}
+```
+
 # 인스턴스 생성
 
 자바에서는 인스턴스를 생성할 때는 아래와 같이 new를 통해 생성한다.
@@ -379,3 +449,7 @@ fun getFunc(): () -> Unit {
     }
 }
 ```
+
+# 마지막으로
+
+코틀린을 이번에 한번 쭉 훑어보면서 느낀 점은 정말 지금까지 자바를 사용하면서 느꼈던 답답함이 한번에 해소되는 느낌이 들었다. 아직 그리 깊게는 써보지 않았는데도 정말정말 재미 있었고, 코틀린이 왜 자바의 대체재라고 불리는 지 크게 깨닫게 되었다. 다음에 사이드 프로젝트를 할 때 코틀린으로 한번 진행을 해보려고 생각중이다.
