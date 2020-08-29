@@ -426,6 +426,59 @@ for(i in 1 until 10 step 2){
 }
 ```
 
+# 상속
+
+자바에서는 상속을 아래와 같이 구현한다.
+
+```java
+class Human{
+    public void sayHello(){
+        System.out.println("Hello!");
+    }
+}
+class gun extends Human{
+    @Override
+    public void sayHello(){
+        System.out.println("Hi!");
+    }
+}
+```
+
+자바에서는 extends 키워드를 통해 상속을 받지만, 코틀린에서는 콜론(:)으로 상속을 받는다. 그리고 부모가 되는 클래스는 상속이 가능하도록 open 키워드를 붙여 상속이 가능하도록 해주어야 하고, Override를 할 메소드에도 open 키워드를 붙여 주어야 한다. 붙이지 않으면 Override가 불가능하다.
+그리고 override를 할 때 자바에서는 @Override 어노테이션을 붙이지만 코틀린에서는 간단하게 fun 앞에 override 키워드를 붙여주면 된다.
+
+```kotlin
+class gunkim : Human() {
+    override fun sayHello() {
+        println("Hi!")
+    }
+}
+open class Human{
+    open fun sayHello(){
+        println("Hello!")
+    }
+}
+```
+
+## 그럼 interface를 implements 받을 땐 어떻게 해야하나?
+
+동일하게 콜론(:)을 사용하여 받을 수 있다.
+지금 해당 예제는 Human클래스를 상속받고, Animal이라는 인터페이스를 implements받고 있다.
+extends와 implements를 구분하는 방법은 생성자 호출 여부로 알 수 있다.
+Human은 클래스이기 때문에 부모 클래스의 생성자 호출을 위해 ()을 열어주었지만, Animal은 인터페이스이기 때문에 부모 생성자를 호출하지 않는다.
+그리고 class가 상속이 가능하게 하고, 메소드가 재정의되게 하기 위해 open키워드를 붙여줬던 반면 interface는 open 키워드를 붙여주지 않아도 된다.
+
+```kotlin
+interface Animal{
+    fun eat()
+}
+class gunkim : Human(), Animal {
+    override fun sayHello() {
+        println("Hi!")
+    }
+}
+```
+
 # 자바와 다른 점
 
 ## 코틀린에서는 세미콜론이 필요없다?
@@ -448,6 +501,22 @@ fun getFunc(): () -> Unit {
         println("Hello World!")
     }
 }
+```
+
+## Null 안정성 지원
+
+자바에서는 변수에 Null을 못 넣게하려면 사용할 수 있는 어노테이션 등 몇개 있지만 문법적으로 지원해주는 것은 없다.
+
+하지만 코틀린에서는 Nullable 타입과 Non-Nullable 타입을 지정할 수 있는데 방법은 어렵지 않다. 변수명과 타입을 지정해주고 뒤에 ?를 붙이면 Null이 허용되는 Nullable타입이고, 붙이지 않으면 Null이 허용되지 않는 Non-Nullable 타입이다.
+
+```kotlin
+var name1:String? = "Nullable"
+var name2:String = "Non-Nullable"
+```
+
+```
+name1 = null //Nullable타입이기 때문에 컴파일 에러가 발생하지 않음
+name2 = null //Non-Nullable타입이기 때문에 컴파일 에러가 발생함
 ```
 
 # 마지막으로
