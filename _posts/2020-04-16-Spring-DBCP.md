@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 HikariCP를 이용한 커넥션 풀 사용하기
 category: Spring
-tag: [Spring Boot]
+tag: [Spring]
 ---
 
 # 커넥션 풀이란?
