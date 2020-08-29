@@ -53,6 +53,106 @@ var a: Int = 1
 var a: String = "msg"
 ```
 
+# 배열 선언
+
+자바에서는 배열을 선언할 때 이런 식으로 선언하게 된다.
+
+```java
+int[] arr1 = {1,2,3};
+int[] arr2 = new int[3];
+```
+
+코틀린에서는 아래와 같이 선언한다.
+
+```kotlin
+val arr1 = arrayOf(1, 2, 3) // [1,2,3]
+val arr2 = arrayOfNulls<Int>(3) //[null, null, null]
+val arr3 = Array(5, {i->i}) //[0, 1, 2, 3, 4]
+```
+
+# For문
+
+자바에서는 보통 아래와 같이 for문을 사용한다.
+
+```java
+String[] students = {"gunkim", "human", "dog"};
+
+for(int i = 0; i < 10; i++){
+    System.out.println(i);
+}
+for(int i = 0; i < students.length; i++){
+    System.out.println(students[i]);
+}
+for(String student : students){
+    System.out.println(student);
+}
+```
+
+코틀린에서는 이런 식으로 사용한다.
+
+```kotlin
+val students = arrayOf("gunkim", "human", "dog")
+
+for(i in 1..10){
+    println(i)
+}
+for(i in 0..students.size-1){
+    println(students[i])
+}
+for(student in students){
+    println(student)
+}
+```
+
+```kotlin
+//10부터 1까지
+for(i in 10 downTo 1){
+    println(i)
+}
+//10부터 1까지 2씩 하락
+for(i in 10 downTo 1 step 2){
+    println(i)
+}
+//1부터 9까지
+for(i in 1 until 10){
+    println(i)
+}
+//1부터 9까지 2씩 상승
+for(i in 1 until 10 step 2){
+    println(i)
+}
+```
+
+# 메소드 선언
+
+자바에서 메소드를 선언할 때면 접근제어자 리턴타입 메소드명 매개변수 순으로 선언한다.
+
+```java
+public String getName(){
+    return "gunkim";
+}
+public void sayHello(){
+    System.out.println("Hello");
+}
+public int sum(int a, int b){
+    return a + b;
+}
+```
+
+코틀린에서는 접근제어자 fun 메소드명 매개변수 리턴타입 순으로 작성한다. 리턴할 게 없는 경우 리턴 타입은 생략이 가능하다.
+
+```kotlin
+fun getName():String{
+    return "gunkim"
+}
+fun sayHello(){
+    println("Hello")
+}
+fun sum(a:Int, b:Int):Int{
+    return a + b
+}
+```
+
 # 문자열 처리
 
 ## 문자열 템플릿
@@ -138,47 +238,6 @@ var a = """
 ```
 
 ![image](https://user-images.githubusercontent.com/45007556/91549899-a86cf080-e962-11ea-8c55-48d218805037.png)
-
-# 자바의 System.out.println과 코틀린의 println은 무슨 차이일까?
-
-이것은 내가 개인적으로 궁금해서 찾아본 부분이다. System.out.println를 먼저 살펴보면
-System 클래스 안에 out객체가 static으로 선언이 되어 있고, out이라는 이름의 PrintStream 클래스를 살펴보면 println이라는 이름의 메소드가 선언이 되어 있는 것을 확인할 수 있다. static으로 선언이 되어 있기 때문에 사용할 때 인스턴스 생성을 해주지 않아도 되었던 것이다.
-![image](https://user-images.githubusercontent.com/45007556/91521103-dd148400-e931-11ea-87f6-f44ce6bea287.png)
-![image](https://user-images.githubusercontent.com/45007556/91521578-f23de280-e932-11ea-8542-341f81f787a2.png)
-
-그리고 코틀린의 println을 살펴보면 함수로 선언이 되어 있고, 내부적으로는 System.out.println을 사용하고 있는 것을 확인할 수 있다.
-결국 코틀린의 println과 자바의 System.out.println은 결국 동일하다고 볼 수 있다. 그렇기 때문에 코틀린에서도 System.out.println을 사용이 가능하다. 하지만 굳이 사용할 이유는 없는 것 같다.
-![image](https://user-images.githubusercontent.com/45007556/91521649-1699bf00-e933-11ea-8407-ebbd0e0c6d4d.png)
-
-# 메소드 선언
-
-자바에서 메소드를 선언할 때면 접근제어자 리턴타입 메소드명 매개변수 순으로 선언한다.
-
-```java
-public String getName(){
-    return "gunkim";
-}
-public void sayHello(){
-    System.out.println("Hello");
-}
-public int sum(int a, int b){
-    return a + b;
-}
-```
-
-코틀린에서는 접근제어자 fun 메소드명 매개변수 리턴타입 순으로 작성한다. 리턴할 게 없는 경우 리턴 타입은 생략이 가능하다.
-
-```kotlin
-fun getName():String{
-    return "gunkim"
-}
-fun sayHello(){
-    println("Hello")
-}
-fun sum(a:Int, b:Int):Int{
-    return a + b
-}
-```
 
 # 접근제어자
 
@@ -356,76 +415,6 @@ List<String> list = new ArrayList<>();
 var list = ArrayList<String>()
 ```
 
-# 배열 선언
-
-자바에서는 배열을 선언할 때 이런 식으로 선언하게 된다.
-
-```java
-int[] arr1 = {1,2,3};
-int[] arr2 = new int[3];
-```
-
-코틀린에서는 아래와 같이 선언한다.
-
-```kotlin
-val arr1 = arrayOf(1, 2, 3) // [1,2,3]
-val arr2 = arrayOfNulls<Int>(3) //[null, null, null]
-val arr3 = Array(5, {i->i}) //[0, 1, 2, 3, 4]
-```
-
-# For문
-
-자바에서는 보통 아래와 같이 for문을 사용한다.
-
-```java
-String[] students = {"gunkim", "human", "dog"};
-
-for(int i = 0; i < 10; i++){
-    System.out.println(i);
-}
-for(int i = 0; i < students.length; i++){
-    System.out.println(students[i]);
-}
-for(String student : students){
-    System.out.println(student);
-}
-```
-
-코틀린에서는 이런 식으로 사용한다.
-
-```kotlin
-val students = arrayOf("gunkim", "human", "dog")
-
-for(i in 1..10){
-    println(i)
-}
-for(i in 0..students.size-1){
-    println(students[i])
-}
-for(student in students){
-    println(student)
-}
-```
-
-```kotlin
-//10부터 1까지
-for(i in 10 downTo 1){
-    println(i)
-}
-//10부터 1까지 2씩 하락
-for(i in 10 downTo 1 step 2){
-    println(i)
-}
-//1부터 9까지
-for(i in 1 until 10){
-    println(i)
-}
-//1부터 9까지 2씩 상승
-for(i in 1 until 10 step 2){
-    println(i)
-}
-```
-
 # 상속
 
 자바에서는 상속을 아래와 같이 구현한다.
@@ -444,8 +433,8 @@ class gun extends Human{
 }
 ```
 
-자바에서는 extends 키워드를 통해 상속을 받지만, 코틀린에서는 콜론(:)으로 상속을 받는다. 그리고 부모가 되는 클래스는 상속이 가능하도록 open 키워드를 붙여 상속이 가능하도록 해주어야 하고, Override를 할 메소드에도 open 키워드를 붙여 주어야 한다. 붙이지 않으면 Override가 불가능하다.
-그리고 override를 할 때 자바에서는 @Override 어노테이션을 붙이지만 코틀린에서는 간단하게 fun 앞에 override 키워드를 붙여주면 된다.
+자바에서는 extends 키워드를 통해 상속을 받지만, 코틀린에서는 콜론(:)으로 상속을 받는다. 그리고 부모가 되는 클래스는 상속이 가능하도록 open 키워드를 붙여 상속이 가능하도록 해주어야 하고, 재정의(Override)를 할 메소드에도 open 키워드를 붙여 주어야 한다. 붙이지 않으면 Override가 불가능하다.
+그리고 재정의(Override)를 할 때 자바에서는 @Override 어노테이션을 붙이지만 코틀린에서는 간단하게 fun 앞에 override 키워드를 붙여주면 된다.
 
 ```kotlin
 class gunkim : Human() {
@@ -518,6 +507,17 @@ var name2:String = "Non-Nullable"
 name1 = null //Nullable타입이기 때문에 컴파일 에러가 발생하지 않음
 name2 = null //Non-Nullable타입이기 때문에 컴파일 에러가 발생함
 ```
+
+# 자바의 System.out.println과 코틀린의 println은 무슨 차이일까?
+
+이것은 내가 개인적으로 궁금해서 찾아본 부분이다. System.out.println를 먼저 살펴보면
+System 클래스 안에 out객체가 static으로 선언이 되어 있고, out이라는 이름의 PrintStream 클래스를 살펴보면 println이라는 이름의 메소드가 선언이 되어 있는 것을 확인할 수 있다. static으로 선언이 되어 있기 때문에 사용할 때 인스턴스 생성을 해주지 않아도 되었던 것이다.
+![image](https://user-images.githubusercontent.com/45007556/91521103-dd148400-e931-11ea-87f6-f44ce6bea287.png)
+![image](https://user-images.githubusercontent.com/45007556/91521578-f23de280-e932-11ea-8542-341f81f787a2.png)
+
+그리고 코틀린의 println을 살펴보면 함수로 선언이 되어 있고, 내부적으로는 System.out.println을 사용하고 있는 것을 확인할 수 있다.
+결국 코틀린의 println과 자바의 System.out.println은 결국 동일하다고 볼 수 있다. 그렇기 때문에 코틀린에서도 System.out.println을 사용이 가능하다. 하지만 굳이 사용할 이유는 없는 것 같다.
+![image](https://user-images.githubusercontent.com/45007556/91521649-1699bf00-e933-11ea-8407-ebbd0e0c6d4d.png)
 
 # 마지막으로
 
