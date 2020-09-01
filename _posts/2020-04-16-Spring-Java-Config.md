@@ -2,7 +2,7 @@
 layout: post
 title: 스프링을 자바로 설정하기
 category: Spring
-tag: [Spring Boot]
+tag: [Spring]
 ---
 
 # 설정을 자바로 하게 되면 좋은 점
