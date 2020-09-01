@@ -33,9 +33,11 @@ tags: [Spring Boot]
 ## 5. OAuth 인증 정보 확인
 
 앱 설정>요약 정보에서 REST API키가 클라이언트 ID이다.
-![image](https://user-images.githubusercontent.com/45007556/91695046-86fd4600-eba8-11ea-91c5-ed865c89a4bc.png)
+![image](https://user-images.githubusercontent.com/45007556/91869283-aa131d00-ecb0-11ea-8092-967af0095ccf.png)
+
 제품 설정>카카오 로그인>보안에서 암호키를 확인할 수 있다.
-![image](https://user-images.githubusercontent.com/45007556/91695120-a1372400-eba8-11ea-8537-7784fc522c2c.png)
+![image](https://user-images.githubusercontent.com/45007556/91869211-8fd93f00-ecb0-11ea-8e44-db923bf62bb0.png)
+
 
 # 구글
 
@@ -64,7 +66,8 @@ tags: [Spring Boot]
 
 유형을 웹 애플리케이션 선택 후 자유롭게 이름을 입력해주고, 승인된 자바스크립트 출처 입력.
 
-![image](https://user-images.githubusercontent.com/45007556/91823941-f2144e80-ec74-11ea-9d76-ef3b8d67e4a1.png)
+![image](https://user-images.githubusercontent.com/45007556/91869032-5b658300-ecb0-11ea-8375-200107e22a08.png)
+
 
 ## 3. OAuth 인증 정보 확인
 
@@ -93,7 +96,8 @@ OAuth2 인증을 위한 클라이언트 ID, 보안 비밀번호 확인
 ## 3. OAuth 인증 정보 확인
 
 OAuth2 인증을 위한 앱 ID, 앱 시크릿 코드(보기 클릭)를 확인
-![image](https://user-images.githubusercontent.com/45007556/91687295-58786e80-eb9a-11ea-9009-43768b7c99a4.png)
+![image](https://user-images.githubusercontent.com/45007556/91869378-c6af5500-ecb0-11ea-82d7-f4a03330e0f4.png)
+
 
 # 네이버
 
