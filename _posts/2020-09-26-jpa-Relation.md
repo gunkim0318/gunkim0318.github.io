@@ -94,7 +94,7 @@ public class Student {
 
 # 저장 방법
 
-## 문제점
+## DB만을 고려한 연관관계 저장
 
 그냥 간단히 아래와 같이 입력하면 된다.
 그런데 여기서 내가 가장 헷갈렸던 부분인데, 해당 코드를 보면 Student엔티티에 School엔티티를 넣는 부분은 있는데, School엔티티에 Student를 넣어주는 부분은 없다.
@@ -114,8 +114,6 @@ Student student = Student.builder()
 studentRepository.save(student);
 ```
 
-## 입력하기
-
 이제 그럼 School엔티티에 List<Student>의 size와 Student엔티티를 조회해보았다. 그런데 결과는 양방향 연관관계를 통해 예상했던 결과가 아니다.
 DB에는 연관관계가 등록됐을 지 모르지만 객체 형태로 조회했을 때는 제대로 값이 확인되지 않는 것을 알 수 있다.
 
@@ -126,7 +124,7 @@ System.out.println("어느학교 학생 수 :: "+schoolRepository.findAll().get(
 
 ![image](https://user-images.githubusercontent.com/45007556/94325848-74293600-ffdb-11ea-9262-01947fbbadf8.png)
 
-## 객체까지 고려한 연관관계 저장
+## DB 및 객체까지 고려한 연관관계 저장
 
 내가 의도한 바는 School엔티티에서도 가지고 있는 Student를 조회하고,
 Student에서도 가지고 있는 School에 대해 조회하는 것이기 때문에 아래와 같이 처리해주면 된다.
