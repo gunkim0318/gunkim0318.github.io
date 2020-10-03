@@ -1,6 +1,6 @@
 # Site Info
-title: FunCoding
-tagline: "재밌는 코딩"
+title: 👈김총 기술 블로그
+tagline: "👈김총 기술 블로그"
 description: "codingfox 테마를 기반으로 만든 깃허브 공부 블로그입니다."
 baseurl: ""
 url: https://gunkim0318.github.io
@@ -25,7 +25,7 @@ version: 1.0.0
 # About/contact
 author:
   name: GUN KIM
-  description: 세상엔 꼭 도움이 되는 것만 있진 않다. 하지만 도움이 될 지 모르니 일단 공부하자. 🧠
+  description: "<b>STATE:</b> 😁하고싶은 게 엄청 많은 상태."
   contact:
     github: https://github.com/gunkim0318
     # facebook:  <hide>
