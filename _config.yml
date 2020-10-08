@@ -38,8 +38,6 @@ nav:
     - "/blog/categories/"
   Tag:
     - "/blog/tags/"
-  Archive:
-    - "/blog/archive"
   About:
     - "/about/"
 
