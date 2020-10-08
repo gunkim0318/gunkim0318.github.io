@@ -14,6 +14,22 @@
       <div class="sidebar-personal-info-section">
         <p>{{ site.author.description }}</p>
       </div>
+      <hr />
+      <div class="sidebar-personal-info-section sidebar-posts-info">
+        <div>
+          <div style="text-align: center"><b>포스트</b></div>
+          <div style="text-align: center">{{ site.posts | size }}</div>
+        </div>
+        <div>
+          <div style="text-align: center"><b>카테고리</b></div>
+          <div style="text-align: center">{{ site.categories | size }}</div>
+        </div>
+        <div>
+          <div style="text-align: center"><b>태그</b></div>
+          <div style="text-align: center">{{ site.tags | size }}</div>
+        </div>
+      </div>
+      <hr />
       {% if site.author.contact %} {% assign len = site.author.contact | size %}
       {% assign current_index = 0 %}
       <div class="sidebar-personal-info-section">

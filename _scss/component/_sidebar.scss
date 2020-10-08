@@ -244,3 +244,12 @@ a.sidebar-nav-item:focus {
     }
   }
 }
+
+.sidebar-posts-info {
+  display: flex;
+  text-align: center;
+
+  div {
+    flex: 1;
+  }
+}
