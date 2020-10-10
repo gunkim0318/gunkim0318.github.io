@@ -9,9 +9,15 @@ title: About
 
 # 주요 관심사
 
-* Java
-* Spring
-* Object-Oriented Programming
-* JavaScript
-* React
-* Functional Programing
+- Java
+- Spring
+- Object-Oriented Programming
+- JavaScript
+- React
+- Functional Programing
+
+# 목표
+
+<p class="message">
+무엇이든 할 수 있는 개발자가 되고 싶습니다.
+</p>
