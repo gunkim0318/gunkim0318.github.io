@@ -2,6 +2,7 @@
 layout: post
 title: JPA 영속성(Persistence) 정리
 category: Jpa
+tags: [Jpa, Java]
 ---
 
 # 영속성 컨텍스트(Persistence Context) 의미
