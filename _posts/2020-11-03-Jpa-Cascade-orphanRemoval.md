@@ -98,7 +98,7 @@ userRepository.save(user); //user, posts persist
 
 # 영속성 전이 옵션
 
-위의 예제에서 이용한 Cascade.PERSIST 옵션 말고도 JPA에서는 여러 옵션들을 추가로 지원해주는데 아래와 같다.
+위의 예제에서 이용한 CascadeType.PERSIST 옵션 말고도 JPA에서는 여러 옵션들을 추가로 지원해주는데 아래와 같다.
 
 - **CascadeType.ALL** - 모든 Cascade 옵션 적용
 - **CascadeType.PERSIST** - 부모 엔티티를 영속화할 때 자식 엔티티도 영속(persist)화 시킨다.
