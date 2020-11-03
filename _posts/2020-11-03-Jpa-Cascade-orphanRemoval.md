@@ -130,8 +130,6 @@ userRepository.save(user); //user, posts persist
 ```java
 User user = userRepository.findAll().get(0);
 user.postsList.clear();
-
-userRepository.save(user);
 ```
 
 이렇게 User(부모)엔티티에서 보유하고 있는 Posts 엔티티들을 초기화 해주었다. 이렇게 되면 자연히 Posts(자식) 엔티티는 고아 객체가 되어 자동으로 삭제(delete)된다.
