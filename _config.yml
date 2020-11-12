@@ -33,7 +33,7 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:
-    - "/"
+    - "/blog/home/"
   Category:
     - "/blog/categories/"
   Tag:
