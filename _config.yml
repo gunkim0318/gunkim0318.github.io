@@ -36,8 +36,8 @@ nav:
     - "/blog/home/"
   Category:
     - "/blog/categories/"
-  Tag:
-    - "/blog/tags/"
+  # Tag:
+  #   - "/blog/tags/"
   About:
     - "/about/"
 
