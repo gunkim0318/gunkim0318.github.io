@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java Byte<->String 변환 방법 및 자르기
+title: Java Byte<->String 변환 방법 및 바이트로 자르기
 category: Java
 tags: [Java]
 ---
