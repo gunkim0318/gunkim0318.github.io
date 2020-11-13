@@ -42,4 +42,10 @@ title: Home
       {% endfor %}
     </div>
   </div>
+  <!-- 태그 목록 표출 -->
+  <div class="tags-expo-list">
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
 </div>
