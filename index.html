@@ -15,7 +15,7 @@ title: Home
   <div class="tags-expo-section">
     <h2>최근 글 바로가기</h2>
     <ul class="tags-expo-posts">
-      {% for post in site.related_posts limit:5 %}
+      {% for post in site.posts limit:5 %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
             {{ post.title }}
