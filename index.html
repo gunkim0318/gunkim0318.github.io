@@ -42,8 +42,9 @@ title: Home
       {% endfor %}
     </div>
   </div>
+  <hr />
   <!-- 태그 목록 표출 -->
-  <div class="tags-expo-list">
+  <div class="tags-expo-list" style="margin-bottom: 40px">
     {% for tag in site.tags %}
     <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
