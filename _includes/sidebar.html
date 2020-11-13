@@ -70,6 +70,7 @@
           <!--카테고리 종류-->
           <span>
             {% for category in site.categories %}
+              <!-- 카테고리 글 카운트 -->
               {% assign t = category[0] %}
               {{ sub_nav[0] }}
                 {% assign counter = 0 %}
@@ -77,7 +78,8 @@
                 {% unless item.published == false %}
                 {% assign counter=counter | plus:1 %}
                 {% endunless %}{% endfor %}
-              <a class="sidebar-nav-item" href="{{ url }}#{{category[0]}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
+
+              <a class="sidebar-nav-item" href="{{ url }}#{{category[0] | slugify}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
             {% endfor %}
           </span>
         {% endif %} 
