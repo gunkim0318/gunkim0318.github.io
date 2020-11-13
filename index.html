@@ -18,11 +18,10 @@ title: Home
       {% for post in paginator.posts %}
       <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
         <li>
-          {{ post.title }}<small class="post-date"
-            >{{ post.date | date_to_string }}</small
-          >
-        </li></a
-      >
+          {{ post.title }}
+          <small class="post-date">{{ post.date | date_to_string }}</small>
+        </li>
+      </a>
       {% endfor %}
     </ul>
     <!-- 카테고리 목록 -->
