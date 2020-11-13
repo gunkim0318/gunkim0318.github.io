@@ -36,7 +36,7 @@ nav:
     - ""
   Blog:
     - "/blog/"
-  Category:
+  Categories:
     - "/blog/categories/"
   # Tag:
   #   - "/blog/tags/"
