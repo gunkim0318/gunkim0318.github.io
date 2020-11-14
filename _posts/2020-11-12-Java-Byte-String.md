@@ -7,7 +7,7 @@ tags: [Java]
 
 보통 문자열을 자릿수로 자를 때는 String클래스에서 지원해주는 substring() 메소드를 사용해서 자르는데, 이번에는 특별하게 문자열을 바이트로 잘라야 하는 경우가 발생해서 해당 방법을 정리해보려고 한다.
 
-# Stirng -> Byte
+# String -> Byte
 
 ```java
 String name = "gunkim";
