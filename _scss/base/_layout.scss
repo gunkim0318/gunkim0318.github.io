@@ -20,7 +20,7 @@
 .container {
   max-width: 28rem;
   a {
-    color: #2490ff;
+    color: $my-title-color;
   }
 }
 @media (min-width: 38em) {

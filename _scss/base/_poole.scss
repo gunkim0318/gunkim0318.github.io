@@ -346,6 +346,7 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   color: #303030;
+  font-weight: bold;
 }
 .page-title,
 .post-title {
@@ -439,5 +440,6 @@ a.pagination-item:hover {
 .tags-expo-posts {
   li {
     color: black;
+    font-weight: bold;
   }
 }

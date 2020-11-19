@@ -21,7 +21,7 @@
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: $font-sans;
   font-size: 0.875rem; /* 15px */
   color: rgba(255, 255, 255, 0.8);
   @include transition(all 0.3s ease-in-out);
@@ -35,7 +35,7 @@
   }
 
   @if $theme-color != $default {
-    background-color: $theme-color;
+    background-color: $my-sidebar-color;
   } @else {
     background-color: darken($theme-color-dark, 10%);
   }
