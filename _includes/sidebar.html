@@ -1,20 +1,22 @@
-<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
 
-<!-- Toggleable sidebar -->
+<!-- 토글 사이드바 -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
+    <!-- 프로필 정보 -->
     <div class="sidebar-personal-info">
+      <!-- 프로필 이미지 -->
       <div class="sidebar-personal-info-section">
         <a href="http://gravatar.com/{{ site.author.gravatar }}">
           <img src="/public/profile.png" title="내 이미지" alt="내 이미지" />
         </a>
       </div>
+      <!-- 프로필 설명 -->
       <div class="sidebar-personal-info-section">
         <p>{{ site.author.description }}</p>
       </div>
       <hr />
+      <!-- 포스트, 카테고리, 태그 수 -->
       <div class="sidebar-personal-info-section sidebar-posts-info">
         <div>
           <div style="text-align: center"><b>포스트</b></div>
@@ -30,6 +32,7 @@
         </div>
       </div>
       <hr />
+      <!-- 팔로우 정보 -->
       {% if site.author.contact %} {% assign len = site.author.contact | size %}
       {% assign current_index = 0 %}
       <div class="sidebar-personal-info-section">
@@ -59,38 +62,30 @@
       
       {% assign sub_len = nav[1] | size | minus: 1 %}
 
+      <!-- 카테고리 목록 -->
+      {% assign category_name = nav[0] %}
       <span class="{% if sub_len > 0 %}foldable{% endif %}">
-        <!-- 카테고리 이름 출력 -->
-        {% if nav[0] == 'Categories' %}
-          <!--카테고리명-->
-          <a
-            class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}"
-            href="{{ url }}"
-          >{{nav[0]}}</a>
-          <!--카테고리 종류-->
-          <span>
-            {% for category in site.categories %}
-              <!-- 카테고리 글 카운트 -->
-              {% assign t = category[0] %}
-              {{ sub_nav[0] }}
-                {% assign counter = 0 %}
-                {% for item in site.categories.[t] %}
-                {% unless item.published == false %}
-                {% assign counter=counter | plus:1 %}
-                {% endunless %}{% endfor %}
+        <a
+          class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}"
+          {% if category_name != 'Categories' %} href="{{ url }}" {% endif %}
+        >{{ category_name }}</a>
 
-              <a class="sidebar-nav-item" href="{{ url }}#{{category[0]}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
-            {% endfor %}
-          </span>
-        {% endif %} 
+        {% if category_name == 'Categories' %}
+        <span>
+          {% for category in site.categories %}
+            <!-- 해당 카테고리 글 카운트 -->
+            {% assign t = category[0] %}
+            {{ sub_nav[0] }}
+              {% assign counter = 0 %}
+              {% for item in site.categories.[t] %}
+              {% unless item.published == false %}
+              {% assign counter=counter | plus:1 %}
+              {% endunless %}{% endfor %}
 
-        {% if nav[0] != 'Categories' %}
-          <a
-            class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}"
-            href="{{ url }}"
-          >{{ nav[0] }}</a>
-        {% endif %} 
-
+            <a class="sidebar-nav-item" href="{{ url }}#{{category[0]}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
+          {% endfor %}
+        </span>
+        {% endif %}
         {% for i in (1..sub_len) %}
           {% for sub_nav in nav[1][i] %} 
             {% assign sub_is_relative = sub_nav[1] | slice: 0 %} 
@@ -108,9 +103,11 @@
       </span>
     {% endfor %}
 
+    <!-- 사이트 버전 -->
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
+  <!-- 라이센스 정보 -->
   <div class="sidebar-item">
     <p>
       &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. This work is
@@ -118,7 +115,6 @@
       <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
     </p>
   </div>
-
   <div class="sidebar-item">
     <p>
       Powered by <a href="http://jekyllrb.com">jekyll</a> and
