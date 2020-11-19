@@ -57,19 +57,19 @@ tags: [Spring Boot]
 애플리케이션 이름, 지원 이메일을 작성 후 최하단 작성 버튼 클릭
 ![image](https://user-images.githubusercontent.com/45007556/91688638-67145500-eb9d-11ea-9351-92820ffa95bc.png)
 
-## 클라이언트 ID 생성으로 이동
+## 4. 클라이언트 ID 생성으로 이동
 
 사용자 인증 정보 만들기>OAuth 클라이언트 ID 선택
 ![image](https://user-images.githubusercontent.com/45007556/91690365-c758c600-eba0-11ea-9290-ede988df72fe.png)
 
-## 클라이언트 ID 생성
+## 5. 클라이언트 ID 생성
 
 유형을 웹 애플리케이션 선택 후 자유롭게 이름을 입력해주고, 승인된 자바스크립트 출처 입력.
 
 ![image](https://user-images.githubusercontent.com/45007556/91869032-5b658300-ecb0-11ea-8375-200107e22a08.png)
 
 
-## 3. OAuth 인증 정보 확인
+## 6. OAuth 인증 정보 확인
 
 OAuth2 인증을 위한 클라이언트 ID, 보안 비밀번호 확인
 ![image](https://user-images.githubusercontent.com/45007556/91690967-ca07eb00-eba1-11ea-9adf-f7cb1ad46be9.png)
@@ -117,7 +117,7 @@ OAuth2 인증을 위한 앱 ID, 앱 시크릿 코드(보기 클릭)를 확인
 
 [깃허브 설정 페이지](https://github.com/settings/developers)로 이동
 
-## 애플리케이션 생성
+## 1. 애플리케이션 생성
 
 OAuth Apps>Register a new application을 클릭
 ![image](https://user-images.githubusercontent.com/45007556/91824849-63a0cc80-ec76-11ea-90e8-016eb786547e.png)
