@@ -79,7 +79,7 @@
                 {% assign counter=counter | plus:1 %}
                 {% endunless %}{% endfor %}
 
-              <a class="sidebar-nav-item" href="{{ url }}#{{category[0] | slugify}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
+              <a class="sidebar-nav-item" href="{{ url }}#{{category[0]}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
             {% endfor %}
           </span>
         {% endif %} 

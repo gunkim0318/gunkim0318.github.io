@@ -62,6 +62,13 @@
     }
     font-family: $font-sans;
   }
+  h1 {
+    color: $my-title-color;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 50px;  
+    text-align: center;
+  }
   h2 {
     color: $my-title-color;
     font-weight: bold;

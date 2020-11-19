@@ -1,28 +1,41 @@
 ---
-layout: page
+layout: default
 title: Categories
+type: page
 ---
+{% assign esc_ctgname="{{ hash }}" %}
+{% assign esc_title="{{ p.title }}" %}
+{% assign esc_date="{{ p.date }}" %}
 
 <div class="tags-expo">
-  <div class="tags-expo-list">
-    {% for tag in site.categories %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
-    {% endfor %}
-  </div>
-  <hr/>
   <div class="tags-expo-section">
-    {% for tag in site.categories %}
-    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+    <h1>{{ esc_ctgname }}</h1>
     <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-      <li>
-        {{ post.title }}
-      <small class="post-date">{{ post.date | date_to_string }}</small>
+      <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
+        <a class="post-title" v-bind:href="p.url">
+          <span class="post-title">{{ esc_title }}</span> <small class="post-date">{{ esc_date }}</small>
+        </a>
       </li>
-      </a>
-      {% endfor %}
     </ul>
-    {% endfor %}
   </div>
 </div>
+
+<script>
+var hash = decodeURI(window.location.hash.substr(1));
+
+var postList = new Vue({
+  el: '.tags-expo-section',
+  data: {
+    posts: []
+  }
+});
+
+axios.get('/posts.json')
+  .then(function (response) {
+    console.log(response)
+    postList.posts = response.data.posts;
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+</script>
