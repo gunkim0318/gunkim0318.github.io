@@ -109,56 +109,36 @@ userRepository.save(user); //user, posts persist
 
 # 고아(orphan) 객체
 
-부모 엔티티와 관계가 끊어진 자식 엔티티를 **고아 객체**라고 하는데 이를 삭제하고 싶을 때 **orphanRemoval=true** 옵션을 이용한다.
+부모 엔티티와 관계가 끊어진 자식 엔티티를 **고아 객체**라고 한다.
 
-## CascadeType.REMOVE와의 차이점
-
-부모 엔티티가 삭제되면 자식 엔티티를 삭제한다는 행위라는 관점에서는 동일하다. 그런데 이 둘은 삭제 조건이 다르다고 볼 수 있을 것 같다.
-
-## **CascadeType.REMOVE**
-
-단순히 부모 엔티티가 삭제될 때 자식 엔티티를 같이 삭제하는 것
-
-## **orphanRemoval=true**
-
-부모 엔티티가 삭제되면 관계가 끊어지기 때문에 관계가 끊어져 고아 객체가 된 자식 엔티티를 삭제하는 것
-
-## 그럼 결국 같은 말 아니야?
-
-**orphanRemoval=true**는 부모-자식 관계가 끊어지게 되면 고아 객체가 된 자식 엔티티를 삭제 한다고 했다. 그런데 이 관계가 끊어지는 경우는 부모 엔티티가 삭제됐을 때만이 아니다. 아래 예제 코드를 한번 살펴보자.
-
+## **orphanRemoval=true**옵션
+```java
+@Entity
+public class User{
+    //...
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval=true)
+    List<Posts> postsList = ArrayList<Posts>();
+}
+```
+만약 부모 엔티티와의 관계가 끊어진 고아 객체가 자동으로 삭제되게 하고 싶을 때 사용하는 옵션인데 **orphanRemoval=true**만 추가해주면 자동으로 고아 객체를 삭제해준다.
+## CascadeType.REMOVE vs orphanRemoval=true
+영속성 전이 REMOVE 옵션은 부모 엔티티가 삭제되었을 때 자식 엔티티를 삭제하는데, 대충 설명을 읽어보면 고아객체 삭제 옵션이랑 유사하다.  
+### 공통점 
+**부모 엔티티를 삭제한다 -> 자식 엔티티를 삭제한다.**  
+### 차이점
+#### CascadeType.REMOVE
+부모 엔티티가 삭제될 경우 **자식 엔티티**를 삭제해라
+#### orphanRemoval=true
+부모 엔티티가 삭제될 경우를 관계가 끊어진 **고아 객체**를 삭제해라
+### 결론
+결국 어떻게 보면 영속성 전이 REMOVE 옵션은 고아 객체 삭제 옵션의 부분집합이라고도 볼 수 있을 것 같다.
+##  고아 객체를 만드는 방법
 ```java
 User user = userRepository.findAll().get(0);
 user.postsList.clear();
 ```
+User(부모)엔티티에서 Posts(자식) 엔티티와의 관계를 끊어 주었다. 이렇게 자연히 Posts(자식) 엔티티는 고아 객체가 되어 자동으로 삭제(delete)된다. 추가로 User(부모) 엔티티가 삭제될 경우에도 관계가 끊어진다.
 
-이렇게 User(부모)엔티티에서 보유하고 있는 Posts 엔티티들을 초기화 해주었다. 이렇게 되면 자연히 Posts(자식) 엔티티는 고아 객체가 되어 자동으로 삭제(delete)된다.
-
-### +**orphanRemoval=true**와 CascadeType.REMOVE를 같이 사용해야 한다.
+## +**orphanRemoval=true**를 사용하려면 CascadeType.REMOVE를 같이 사용해야 한다?
 
 원래는 **orphanRemoval=true**옵션만 추가하게 되면 작동이 되어야 하는 게 맞을텐데, 작동이 안되어서 구글링해본 결과 **CascadeType.REMOVE**와 같이 사용해야 작동한다는 답변을 발견했다. 아마 원인은 하이버네이트 쪽 문제가 아닌가 하는 의견이 있어서 첨부한다.[참고](https://github.com/mjung1798/Jyami-Java-Lab/issues/1)
-
-## CascadeType.PERSIST와 같이 사용하면 생기는 문제
-
-_User.java_
-
-```java
-@Entity
-public class User{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    @Column(nullable = false)
-    String name;
-    String email;
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, orphanRemoval=true)
-    List<Posts> postsList = ArrayList<Posts>();
-}
-```
-
-```java
-Posts posts = postsRepository.findAll().get(0);
-postsRepository.delete(posts);
-```
-
-이건 내가 직면했던 문제인데, **CascadeType.PERSIST**와 **orphanRemoval=true**를 같이 사용하게 되면 delete()메소드를 실행했음에도 delete쿼리가 발생하지 않았다. 적극적으로 디버깅 및 구글링을 해보았으나 정확한 원인은 찾을 수 없었으나 아마 이게 참고가 되었다. 원인을 알게된다면 제보 바람.[참고](https://joont92.github.io/jpa/CascadeType-PERSIST%EB%A5%BC-%ED%95%A8%EB%B6%80%EB%A1%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%95%88%EB%90%98%EB%8A%94-%EC%9D%B4%EC%9C%A0/)
