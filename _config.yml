@@ -37,7 +37,7 @@ nav:
   Blog:
     - "/blog/"
   Categories:
-    - "/blog/categories/"
+    - "/blog/categories"
   # Tag:
   #   - "/blog/tags/"
   About:
