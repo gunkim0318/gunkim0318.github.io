@@ -51,6 +51,7 @@
 
   article {
     line-height: 1.4rem;
+    margin-top: 50px;
   }
 }
 
@@ -77,4 +78,20 @@
 }
 .related-posts li a:hover small {
   color: inherit;
+}
+
+// 게시글 목차
+.toc{
+  border-radius: 30px;
+  font-weight: bold;
+  
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding-left: 10px;
+
+    li ul li{
+      padding-left: 40px;
+    }
+  }
 }
