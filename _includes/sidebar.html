@@ -66,7 +66,7 @@
       {% assign category_name = nav[0] %}
       <span class="{% if sub_len > 0 %}foldable{% endif %}">
         <a
-          class="sidebar-nav-item {% if page.url == nav[1][0] %}active{% endif %}"
+          class="sidebar-nav-item {% if category_name == 'Categories' %}active{% endif %}"
           {% if category_name != 'Categories' %} href="{{ url }}" {% endif %}
         >{{ category_name }}</a>
 
