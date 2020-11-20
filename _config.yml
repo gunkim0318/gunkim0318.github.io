@@ -32,7 +32,11 @@ author:
     email: mailto:gunkim0318@gmail.com
 # Navigation (2nd level links supported)
 nav:
-  개발:
+  Home:
+    - "/"
+  'All Posts':
+    - "/blog/"
+  Dev:
     Spring:
     Java:
     JavaScript:
@@ -40,8 +44,10 @@ nav:
     Kotlin:
     React:
     Git:
-  잡담:
-    속닥속닥:
+  속닥속닥:
+    - "/blog/categories#속닥속닥"
+  About:
+    - "/about/"
 
 category_page: "/blog/categories"
 
