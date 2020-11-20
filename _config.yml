@@ -21,7 +21,7 @@ paginate_path: "/blog/page:num"
 permalink: pretty
 
 base_date_format:
-  - '%y/%m/%d'
+  - "%y/%m/%d"
 
 author:
   name: GUN KIM
@@ -35,7 +35,7 @@ author:
 nav:
   Home:
     - "/"
-  'All Posts':
+  "All Posts":
     - "/blog/"
   Dev:
     Spring:
@@ -45,7 +45,8 @@ nav:
     Kotlin:
     React:
     Git:
-  속닥속닥:
+    "Error Log":
+  Think:
     - "/blog/categories#속닥속닥"
   About:
     - "/about/"
