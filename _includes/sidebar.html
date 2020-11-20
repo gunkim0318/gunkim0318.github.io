@@ -16,22 +16,6 @@
         <p>{{ site.author.description }}</p>
       </div>
       <hr />
-      <!-- 포스트, 카테고리, 태그 수 -->
-      <div class="sidebar-personal-info-section sidebar-posts-info">
-        <div>
-          <div style="text-align: center"><b>포스트</b></div>
-          <div style="text-align: center">{{ site.posts | size }}</div>
-        </div>
-        <div>
-          <div style="text-align: center"><b>카테고리</b></div>
-          <div style="text-align: center">{{ site.categories | size }}</div>
-        </div>
-        <div>
-          <div style="text-align: center"><b>태그</b></div>
-          <div style="text-align: center">{{ site.tags | size }}</div>
-        </div>
-      </div>
-      <hr />
       <!-- 팔로우 정보 -->
       {% if site.author.contact %} {% assign len = site.author.contact | size %}
       {% assign current_index = 0 %}
@@ -65,40 +49,30 @@
       <!-- 카테고리 목록 -->
       {% assign category_name = nav[0] %}
       <span class="{% if sub_len > 0 %}foldable{% endif %}">
+        <!-- 상위 카테고리 이름 -->
         <a
           class="sidebar-nav-item {% if category_name == 'Categories' %}active{% endif %}"
-          {% if category_name != 'Categories' %} href="{{ url }}" {% endif %}
         >{{ category_name }}</a>
+        
+        <!-- 하위 카테고리 목록 -->
+        {% assign sub_category_name = nav[1] %}
+        {% for item in sub_category_name %}
 
-        {% if category_name == 'Categories' %}
-        <span>
+          {% assign sub_name = item[0] %}
+
           {% for category in site.categories %}
             <!-- 해당 카테고리 글 카운트 -->
-            {% assign t = category[0] %}
-            {{ sub_nav[0] }}
               {% assign counter = 0 %}
-              {% for item in site.categories.[t] %}
-              {% unless item.published == false %}
-              {% assign counter=counter | plus:1 %}
-              {% endunless %}{% endfor %}
-
-            <a class="sidebar-nav-item" href="{{ url }}#{{category[0]}}" style="padding-left:50px;">{{ category[0] }}({{ counter }})</a>
+              {% for item in site.categories.[sub_name] %}
+                {% unless item.published == false %}
+                  {% assign counter=counter | plus:1 %}
+                {% endunless %}
+              {% endfor %}
           {% endfor %}
-        </span>
-        {% endif %}
-        {% for i in (1..sub_len) %}
-          {% for sub_nav in nav[1][i] %} 
-            {% assign sub_is_relative = sub_nav[1] | slice: 0 %} 
-            {% assign sub_url = sub_nav[1] %} 
-
-            {% if sub_is_relative == '/' %} 
-              {% assign sub_url = sub_nav[1] | prepend: site.baseurl %} 
-            {% endif %}
-            <a
-              class="sidebar-nav-item sidebar-nav-item-sub {% if page.url == sub_nav[1] %}active{% endif %}"
-              href="{{ sub_url }}"
-            >{{ sub_nav[0] }}</a>
-          {% endfor %} 
+          <a
+          class="sidebar-nav-item sidebar-nav-item-sub {% if page.url == sub_nav[1] %}active{% endif %}"
+          href="{{site.category_page}}#{{ sub_name }}"
+            >{{ sub_name }}({{ counter }})</a>
         {% endfor %}
       </span>
     {% endfor %}

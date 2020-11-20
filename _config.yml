@@ -32,20 +32,18 @@ author:
     email: mailto:gunkim0318@gmail.com
 # Navigation (2nd level links supported)
 nav:
-  Home:
-    - ""
-  Blog:
-    - "/blog/"
-  Categories:
-    - "/blog/categories"
-  # Tag:
-  #   - "/blog/tags/"
-  About:
-    - "/about/"
+  개발:
+    Spring:
+    Java:
+    JavaScript:
+    Jpa:
+    Kotlin:
+    React:
+    Git:
+  잡담:
+    속닥속닥:
 
-# Where are tags and categories displayed
-tag_page: "/blog/tags/"
-category_page: "/blog/categories/"
+category_page: "/blog/categories"
 
 # Puglins
 mathjax: true # whether support mathjax
