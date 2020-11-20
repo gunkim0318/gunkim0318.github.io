@@ -30,7 +30,8 @@ author:
     github: https://github.com/gunkim0318
     # facebook:  <hide>
     email: mailto:gunkim0318@gmail.com
-# Navigation (2nd level links supported)
+
+# 사이드바 카테고리.
 nav:
   Home:
     - "/"
@@ -49,6 +50,7 @@ nav:
   About:
     - "/about/"
 
+tag_page: "/blog/tags"
 category_page: "/blog/categories"
 
 # Puglins
