@@ -60,8 +60,8 @@
 
           {% assign sub_name = item[0] %}
 
+          <!-- 해당 카테고리 글 카운트 -->
           {% for category in site.categories %}
-            <!-- 해당 카테고리 글 카운트 -->
               {% assign counter = 0 %}
               {% for item in site.categories.[sub_name] %}
                 {% unless item.published == false %}
