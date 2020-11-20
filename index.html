@@ -19,7 +19,7 @@ title: Home
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
             {{ post.title }}
-            <small class="post-date">{{ post.date | date_to_string }}</small>
+            <small class="post-date">{{ post.date | date: site.base_date_format[0] }}</small>
           </li>
         </a>
       {% endfor %}
@@ -33,7 +33,7 @@ title: Home
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
             {{ post.title }}
-            <small class="post-date">{{ post.date | date_to_string }}</small>
+            <small class="post-date">{{ post.date | date: site.base_date_format[0] }}</small>
           </li>
         </a>
         {% endfor %}

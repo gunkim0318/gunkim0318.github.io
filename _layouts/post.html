@@ -5,7 +5,7 @@ layout: default
 <div class="post">
   <!-- 포스트 정보 -->
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">{{ page.date | date: site.base_date_format[0] }}</span>
   {% if page.tags %} | 
     {% for tag in page.tags %}
       <a

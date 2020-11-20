@@ -20,9 +20,9 @@ paginate: 5
 paginate_path: "/blog/page:num"
 permalink: pretty
 
-version: 1.0.0
+base_date_format:
+  - '%y/%m/%d'
 
-# About/contact
 author:
   name: GUN KIM
   description: "<b>STATE:</b> 😁하고싶은 게 엄청 많음."
