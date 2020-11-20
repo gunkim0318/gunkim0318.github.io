@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ajax 200 성공 반환하는데 success 호출 안되는 문제
-category: JavaScript
+category: [Error Log]
 tag: [JavaScript]
 ---
 

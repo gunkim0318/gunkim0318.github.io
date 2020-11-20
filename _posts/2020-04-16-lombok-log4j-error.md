@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 스프링 메이븐에서 @Log4j 사용 시 오류
-category: Spring
+category: Error Log
 tag: [Spring]
 ---
 
