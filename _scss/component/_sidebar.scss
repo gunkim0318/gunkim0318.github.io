@@ -22,7 +22,7 @@
   visibility: hidden;
   overflow-y: auto;
   font-family: $font-sans;
-  font-size: 0.875rem; /* 15px */
+  font-size: 1rem; /* 15px */
   color: rgba(255, 255, 255, 0.8);
   @include transition(all 0.3s ease-in-out);
 
