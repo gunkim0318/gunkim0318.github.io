@@ -10,6 +10,7 @@ type: page
 <div class="tags-expo">
   <div class="tags-expo-section">
     <h1>{{ esc_ctgname }}</h1>
+    <hr/>
     <ul class="tags-expo-posts">
       <li v-for="p in posts" v-if="p.categories.indexOf(hash) != -1">
         <a class="post-title" v-bind:href="p.url">
@@ -19,6 +20,7 @@ type: page
     </ul>
   </div>
 </div>
+<hr/>
 
 <script>
 var hash = decodeURI(window.location.hash.substr(1));
