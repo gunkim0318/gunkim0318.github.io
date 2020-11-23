@@ -41,10 +41,8 @@ nav:
     Spring:
     Java:
     JavaScript:
-    Jpa:
-    Kotlin:
-    React:
-    Git:
+    Python:
+    Other:
     "Error Log":
   Think:
     - "/blog/categories#속닥속닥"

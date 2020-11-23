@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JPA 양방향 연관관계 나름 정리
-category: Jpa
+category: Java
 tags: [Java, Spring, Spring Boot]
 ---
 

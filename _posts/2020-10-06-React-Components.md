@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 리액트 초보의 컴포넌트에 대한 고민(feat.디자인 패턴)
-category: React
+category: JavaScript
 tags: [React]
 ---
 

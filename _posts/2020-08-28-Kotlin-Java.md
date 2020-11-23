@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 코틀린과 자바 비교해보면서 훑어보기
-category: Kotlin
+category: Other
 tags: [Java, Kotlin]
 date: 2020-08-30-02
 ---

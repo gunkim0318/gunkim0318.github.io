@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git 커밋 메세지를 수정하는 방법
-category: Git
+category: Other
 tags: [Git]
 ---
 

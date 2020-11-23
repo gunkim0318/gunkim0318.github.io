@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JPA 영속성(Persistence) 정리
-category: Jpa
+category: Java
 tags: [Jpa, Java]
 ---
 
