@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GoDaddy를 통한 도메인 구매 및 깃허브 페이지 연동하기
-category: 속닥속닥
+category: Think
 tags: [Domain, Dns]
 ---
 
