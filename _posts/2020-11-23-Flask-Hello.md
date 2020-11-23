@@ -65,6 +65,7 @@ api.add_resource(HelloWorld, '/sayHello')
 if __name__ == '__main__':
     app.run()
 ```
+HelloWorld라는 클래스를 만들어주었는데, 이 때 메소드명을 get, post, put, delete 등으로 지어주면 자동으로 해당 요청 메소드로 매핑된다.
 ## 플라스크 실행하기
 > flask run
 
