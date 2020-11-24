@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Jekyll "Invalid Markdown processor given: redcarpet" 에러'
+title: "Jekyll 'Invalid Markdown processor given: redcarpet' 에러"
 category: Error Log
 tags: [Jekyll]
 ---
