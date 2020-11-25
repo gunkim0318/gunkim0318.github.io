@@ -1,14 +1,8 @@
-# 깃허브 블로그
+Demo: [http://webjeda.com/cards](http://webjeda.com/cards)
 
-## 저장소 내려받기
-```
-git clone https://github.com/gunkim0318/gunkim0318.github.io.git
-```
-## root로 이동
-```
-cd gunkim0318.github.io
-```
-## 로컬 실행
-```
-jekyll serve
-```
+## Installation
+* Fork the repository
+* Go to settings and set Github Pages source as master.
+* Your new site should be ready.
+
+For more themes visit - [https://jekyll-themes.com](https://jekyll-themes.com)

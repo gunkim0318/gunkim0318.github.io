@@ -1,53 +1,71 @@
 ---
 layout: default
-title: Home
 ---
 
-<div class="tags-expo">
-  <!-- 카테고리 목록 -->
-  <div class="tags-expo-list">
-    {% for tag in site.categories %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+<div class="home py-4 py-md-5">
+  <div class="row">
+    {% for post in paginator.posts %}   
+      <div class="col-12 col-md-6 col-lg-4">
+       <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
+        <div class="card rounded overflow-hidden">  
+          <div class="image">
+            {% if post.image %}
+            <img src="{{post.image | relative_url}}" alt="{{post.title}}">
+            {% endif %}
+            <div class="card-body">
+              <h3 class="panel-title font-weight-bold">{{ post.title | truncate: 25 }}</h3>
+              <p class="p-0 my-1 mx-0"><span class="post-meta"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span></p>
+               <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      </div>
     {% endfor %}
   </div>
-  <hr />
-  <!-- 최근 글 바로가기 -->
-  <div class="tags-expo-section">
-    <h2>최근 글 바로가기</h2>
-    <ul class="tags-expo-posts">
-      {% for post in site.posts limit:5 %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-            {{ post.title }}
-            <small class="post-date">{{ post.date | date: site.base_date_format[0] }}</small>
-          </li>
-        </a>
-      {% endfor %}
-    </ul>
-    <!-- 카테고리 목록 -->
-    <div class="tags-expo-section">
-      {% for tag in site.categories %}
-      <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-      <ul class="tags-expo-posts">
-        {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-            {{ post.title }}
-            <small class="post-date">{{ post.date | date: site.base_date_format[0] }}</small>
-          </li>
-        </a>
-        {% endfor %}
-      </ul>
-      {% endfor %}
+</div> 
+    
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+        {% if paginator.total_pages > 1 %}
+        <ul class="pagination">
+          {% if paginator.previous_page %}
+            <li class="page-item active">
+              <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <span class="page-link">Previous</span>
+            </li>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <li class="page-item active">
+                <span class="page-link">{{ page }}</span>
+              </li>
+            {% elsif page == 1 %}
+              <li class="page-item">
+                <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+              </li>
+            {% else %}
+              <li class="page-item">
+                <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <li class="page-item active">
+              <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <span class="page-link">Next</span>
+            </li>
+          {% endif %}
+          </ul>
+        {% endif %}
     </div>
   </div>
-  <hr />
-  <!-- 태그 목록 표출 -->
-  <div class="tags-expo-list" style="margin-bottom: 40px">
-    {% for tag in site.tags %}
-    <a href="/blog/tags/#{{ tag[0] | slugify }}" class="post-tag"
-      >{{ tag[0] }}</a
-    >
-    {% endfor %}
-  </div>
+
 </div>

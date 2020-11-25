@@ -1,59 +1,63 @@
-# Site Info
-title: 👈김총 기술 블로그
-tagline: "👈김총 기술 블로그"
-description: "codingfox 테마를 기반으로 만든 깃허브 공부 블로그입니다."
-baseurl: ""
-url: https://gunlog.dev
-logo: "/public/logo.png"
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site configurations
-gems:
-  - jekyll-paginate
+# Site settings
+title: 김총 기술 블로그
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  공부한 것을 정리하는 블로그
+  
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://localhost:4000" # the base hostname & protocol for your site
+
+#sidebar
+default-image: webjeda-logo-big.jpg # If there is no featured image in a post then this image will be showed. Also on all pages this image will be showed. Use a 500x250 image.
+
+#footer
+
+built-by: webjeda
+
+copyright:
+   name: webjeda
+   link: 'http://blog.webjeda.com'
+
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-excerpt_separator: "<!-- more -->"
+permalink: /:title/
+paginate: 6
+paginate_path: /page:num/
+
+# Tracker
+analytics: UA-83979019-1
+
+# Comments
+disqus: yes
+disqus-shortname: webjeda-demo
+
+#social
+# facebook: http://facebook.com/
+# quora: http://quora.com/
+# twitter: http://twitter.com/
+github: http://github.com/gunkim0318
+email: gunkim0318@gemail.com
+
+#facebook like box
+# fb-like-box: yes
+# fb-app-id: 549480635219583
+# fb-page-url: https://www.facebook.com/webjeda/
+# fb-page-title: webjeda
+
+# Sass style
 sass:
   style: compressed
-  sass_dir: _scss
-paginate: 5
-paginate_path: "/blog/page:num"
-permalink: pretty
 
-base_date_format:
-  - "%y/%m/%d"
-
-author:
-  name: GUN KIM
-  description: "<b>STATE:</b> 😁하고싶은 게 엄청 많음."
-  contact:
-    github: https://github.com/gunkim0318
-    # facebook:  <hide>
-    email: mailto:gunkim0318@gmail.com
-
-# 사이드바 카테고리.
-nav:
-  Home:
-    - "/"
-  "All Posts":
-    - "/blog/"
-  Dev:
-    Spring:
-    Java:
-    JavaScript:
-    Python:
-    Other:
-    "Error Log":
-  Think:
-    - "/blog/categories#Think"
-  About:
-    - "/about/"
-
-tag_page: "/blog/tags"
-category_page: "/blog/categories"
-
-# Puglins
-mathjax: true # whether support mathjax
-google_analytics_token: "UA-00000000-1" # leave blank if you don't want google analytics
-disqus_short_name: "gunkim" # leave blank if you don't want disqus
+# Ruby Gems
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
 

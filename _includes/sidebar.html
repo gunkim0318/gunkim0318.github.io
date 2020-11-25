@@ -1,97 +1,49 @@
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" />
+<div class="col-md-4 mt20">
+  <div class="post-img">
+    {% if page.image %}
+    <img
+      width="600"
+      class="rounded"
+      src="{{page.image | relative_url}}"
+      alt="{{page.title}}"
+    />
+    {% endif %}
+  </div>
 
-<!-- 토글 사이드바 -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <!-- 프로필 정보 -->
-    <div class="sidebar-personal-info">
-      <!-- 프로필 이미지 -->
-      <div class="sidebar-personal-info-section">
-        <img src="/public/profile.png" title="내 이미지" alt="내 이미지" />
-      </div>
-      <!-- 프로필 설명 -->
-      <div class="sidebar-personal-info-section">
-        <p>{{ site.author.description }}</p>
-      </div>
-      <!-- 팔로우 정보 -->
-      {% if site.author.contact %} {% assign len = site.author.contact | size %}
-      {% assign current_index = 0 %}
-      <div class="sidebar-personal-info-section">
+  <div class="mt10 recent">
+    <h2>Recent articles</h2>
+    <ul>
+      {% for post in site.related_posts limit:3 %}
+
+      <li>
         <p>
-          Follow me: {% for contact in site.author.contact %} {% assign iconname
-          = contact[0] %} {% if contact[0] == 'email' %} {% assign iconname =
-          'envelope' %} {% endif %}
-          <a href="{{ contact[1] }}">
-            <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
-          </a>
-          {% assign current_index = current_index | plus: 1 %} {% if
-          current_index != len %}|{% endif %} {% endfor %}
+          <a href="{{ post.url  | relative_url }}">{{ post.title }}</a
+          ><small>&nbsp;&nbsp;{{ post.date | date_to_string }}</small>
         </p>
-      </div>
-      {% endif %}
+      </li>
+
+      {% endfor %}
+    </ul>
+  </div>
+  {% if site.fb-like-box %}
+  <div class="mt10">
+    <div
+      class="fb-page"
+      data-href="https://www.facebook.com/webjeda/"
+      data-width="400"
+      data-small-header="true"
+      data-adapt-container-width="true"
+      data-hide-cover="true"
+      data-show-facepile="true"
+    >
+      <blockquote
+        cite="https://www.facebook.com/webjeda/"
+        class="fb-xfbml-parse-ignore"
+      >
+        <a href="{{site.fb-page-url}}">{{site.fb-page-title}}</a>
+      </blockquote>
     </div>
   </div>
-
-  <nav class="sidebar-nav">
-    {% for nav in site.nav %} 
-      {% assign is_relative = nav[1][0] | slice: 0 %} 
-      {% assign url = nav[1][0] %} 
-      
-      {% if is_relative == '/' %} 
-        {% assign url = nav[1][0] | prepend: site.baseurl %} 
-      {% endif %} 
-      
-      {% assign sub_len = nav[1] | size | minus: 1 %}
-
-      <!-- 카테고리 목록 -->
-      {% assign category_name = nav[0] %}
-      {% assign sub_category_name = nav[1] %}
-      <span class="{% if sub_len > 0 %}foldable{% endif %}">
-        <!-- 상위 카테고리 이름 -->
-        <a
-          class="sidebar-nav-item {% if category_name == 'Categories' %}active{% endif %}"
-          {% if sub_category_name[0] != nil %}
-            href="{{ url }}"
-          {% endif %}
-        >{{ category_name }}</a>
-        
-        <!-- 하위 카테고리 목록 -->
-        {% for item in sub_category_name %}
-
-          {% assign sub_name = item[0] %}
-
-          <!-- 해당 카테고리 글 카운트 -->
-          {% for category in site.categories %}
-              {% assign counter = 0 %}
-              {% for item in site.categories.[sub_name] %}
-                {% unless item.published == false %}
-                  {% assign counter=counter | plus:1 %}
-                {% endunless %}
-              {% endfor %}
-          {% endfor %}
-          {% if sub_name != nil %}
-            <a
-            class="sidebar-nav-item sidebar-nav-item-sub {% if page.url == sub_nav[1] %}active{% endif %}"
-            href="{{site.category_page}}#{{ sub_name }}"
-              >{{ sub_name }}({{ counter }})</a>
-          {% endif %}
-        {% endfor %}
-      </span>
-    {% endfor %}
-  </nav>
-
-  <!-- 라이센스 정보 -->
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. This work is
-      liscensed under
-      <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
-    </p>
-  </div>
-  <div class="sidebar-item">
-    <p>
-      Powered by <a href="http://jekyllrb.com">jekyll</a> and
-      <a href="http://codinfox.github.io">codinfox-lanyon</a>
-    </p>
-  </div>
+  {% endif %}
+  <br />
 </div>
