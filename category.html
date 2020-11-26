@@ -17,41 +17,40 @@ permalink: /categories/
 <script>
   var div = window.location.hash.indexOf('?');
   var hash = decodeURI(window.location.hash.substr(1, div-1));
+  var pageNum = window.location.hash.substr(div+1);
+  console.log('PAGE : '+pageNum);
+
   axios.get('/posts.json')
     .then(function (response) {
-      var a = response.data;
-      console.log(response);
-      var posts2 = [];
+      var postsList = [];
       for(var i = 0; i < response.data.posts.length; i++){
         var posts = response.data.posts[i];
         var categories = posts.categories[0];
 
         if( categories === window.hash ){
-          posts2.push(posts);
+          postsList.push(posts);
         }
       }
-      console.log(hash);
-      console.log(posts2);
-      printPostsList(posts2);
+      printPostsList(postsList);
     }).catch(function (error) {
       console.log(error);
     });
-    function printPostsList(posts){
-      for(var i = 0; i < posts.length; i++){
-        var my = posts[i];
+    function printPostsList(postsList){
+      for(var i = 0; i < postsList.length; i++){
+        var posts = postsList[i];
 
         var html = "";
         html += '<div class="col-12 col-md-6 col-lg-4">';
-        html += `<a href="${my.url}" class="index-anchor">`;
+        html += `<a href="${posts.url}" class="index-anchor">`;
         html += '<div class="card rounded overflow-hidden">';
         html += '<div class="image">';
-        if( my.image ){
-        html += `<img src="${my.image}" alt="${my.title} 이미지" >`;
+        if( posts.image ){
+          html += `<img src="${posts.image}" alt="${posts.title} 이미지" >`;
         }
         html += '<div class="card-body">';
-        html += `<h3 class="panel-title font-weight-bold">${my.title}</h3>`;
-        html += `<p class="p-0 my-1 mx-0"><span class="post-meta"><small>${my.date}</small></span></p>`;
-        html += `<p>${my.content}</p>`;
+        html += `<h3 class="panel-title font-weight-bold">${posts.title}</h3>`;
+        html += `<p class="p-0 my-1 mx-0"><span class="post-meta"><small>${posts.date}</small></span></p>`;
+        html += `<p>${posts.content}</p>`;
         html += '</div>';
         html += '</div>';
         html += '</div>';
