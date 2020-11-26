@@ -6,62 +6,50 @@ permalink: /categories/
 {% assign esc_ctgname="{{ hash }}" %}
 {% assign esc_title="{{ p.title }}" %}
 {% assign esc_date="{{ p.date }}" %}
-<div>
-  <div class="postsList">
-    <h1>{{ esc_ctgname }}</h1>
-    <hr/>
-    <ul class="tags-expo-posts">
-      <!--v-if="p.categories.indexOf(hash) != -1"-->
-      <li v-for="p in posts">
-        <a class="post-title" v-bind:href="p.url">
-          <span class="post-title">{{ esc_title }}</span> <small class="post-date">{{ esc_date }}</small>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+{% assign esc_content="{{p.content}}" %}
+{% assign esc_image="{{p.image}}" %}
+{% assign esc_url="{{p.url}}" %}
+
 <div class="home py-4 py-md-5">
   <div class="row">
-    {% for post in paginator.posts %}   
-      <div class="col-12 col-md-6 col-lg-4">
-       <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
+      <div v-for="p in posts" class="col-12 col-md-6 col-lg-4">
+       <a href="{{ esc_url | prepend: site.baseurl }}" class="index-anchor">
         <div class="card rounded overflow-hidden">  
           <div class="image">
-            {% if post.image %}
-            <img src="{{post.image | relative_url}}" alt="{{post.title}}">
+            {% if esc_image != "" %}
+            <img src="{{esc_image | relative_url}}" alt="{{ esc_title }}">
             {% endif %}
             <div class="card-body">
-              <h3 class="panel-title font-weight-bold">{{ post.title | truncate: 25 }}</h3>
-              <p class="p-0 my-1 mx-0"><span class="post-meta"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span></p>
-               <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+              <h3 class="panel-title font-weight-bold">{{ esc_title | truncate: 25 }}</h3>
+              <p class="p-0 my-1 mx-0"><span class="post-meta"><small>{{ esc_date  }}</small></span></p>
+               <p>{{ esc_content }}</p>
             </div>
           </div>
         </div>
       </a>
-      </div>
-    {% endfor %}
+    </div>
   </div>
 </div> 
 <script>
   var div = window.location.hash.indexOf('?');
   var hash = decodeURI(window.location.hash.substr(1, div-1));
-
   axios.get('/posts.json')
     .then(function (response) {
+      var a = response.data;
+      console.log(response);
       var posts2 = [];
       for(var i = 0; i < response.data.posts.length; i++){
         var posts = response.data.posts[i];
         var categories = posts.categories[0];
 
-        console.log(hash);
-        if( categories === hash ){
+        if( categories === window.hash ){
           posts2.push(posts);
         }
       }
+      console.log(hash);
       console.log(posts2);
-
       new Vue({
-        el: '.postsList',
+        el: '.row',
         data: {
           posts: posts2
         }
