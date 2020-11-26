@@ -3,6 +3,7 @@ layout: post
 title: 인텔리제이 Lombok 사용 시 Gradle Build 에러
 category: Spring
 tag: [Spring Boot]
+image: https://user-images.githubusercontent.com/45007556/91044839-e7443300-e650-11ea-8fab-4558843075ed.png
 ---
 
 # 문제

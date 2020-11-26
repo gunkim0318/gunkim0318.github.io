@@ -3,70 +3,101 @@ layout: default
 title: 카테고리
 permalink: /categories/
 ---
-{% assign esc_ctgname="{{ hash }}" %}
-{% assign esc_title="{{ p.title }}" %}
-{% assign esc_date="{{ p.date }}" %}
-<div>
-  <div class="postsList">
-    <h1>{{ esc_ctgname }}</h1>
-    <hr/>
-    <ul class="tags-expo-posts">
-      <!--v-if="p.categories.indexOf(hash) != -1"-->
-      <li v-for="p in posts">
-        <a class="post-title" v-bind:href="p.url">
-          <span class="post-title">{{ esc_title }}</span> <small class="post-date">{{ esc_date }}</small>
-        </a>
-      </li>
+<div class="home py-4 py-md-5">
+  <div id="postsList" class="row">
+  </div>
+</div> 
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <ul class="pagination">
     </ul>
   </div>
 </div>
-<div class="home py-4 py-md-5">
-  <div class="row">
-    {% for post in paginator.posts %}   
-      <div class="col-12 col-md-6 col-lg-4">
-       <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
-        <div class="card rounded overflow-hidden">  
-          <div class="image">
-            {% if post.image %}
-            <img src="{{post.image | relative_url}}" alt="{{post.title}}">
-            {% endif %}
-            <div class="card-body">
-              <h3 class="panel-title font-weight-bold">{{ post.title | truncate: 25 }}</h3>
-              <p class="p-0 my-1 mx-0"><span class="post-meta"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span></p>
-               <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      </div>
-    {% endfor %}
-  </div>
-</div> 
 <script>
   var div = window.location.hash.indexOf('?');
-  var hash = decodeURI(window.location.hash.substr(1, div-1));
-
+  var categoryName = decodeURI(window.location.hash.substr(1, div-1));
+  var viewPostsNum = 6;
+  var pageNum = parseInt(window.location.hash.substr(div+1));
+  
   axios.get('/posts.json')
     .then(function (response) {
-      var posts2 = [];
-      for(var i = 0; i < response.data.posts.length; i++){
+      var postsList = [];
+      for(var i in response.data.posts){
         var posts = response.data.posts[i];
         var categories = posts.categories[0];
 
-        console.log(hash);
-        if( categories === hash ){
-          posts2.push(posts);
+        if( categories === window.categoryName ){
+          postsList.push(posts);
         }
       }
-      console.log(posts2);
-
-      new Vue({
-        el: '.postsList',
-        data: {
-          posts: posts2
-        }
-      });
+      pagination(postsList);
+      printPostsList(postsList);
     }).catch(function (error) {
       console.log(error);
     });
+    function pagination(postsList){
+      var totalPageNum = parseInt(postsList.length/6);
+      if(postsList.length%viewPostsNum != 0){
+        totalPageNum += 1;
+      }
+      var isPrev = pageNum != 1;
+      var isNext = pageNum != totalPageNum;
+      
+      console.log('현재 페이지 : '+pageNum);
+      console.log("보여지는 게시글 수 "+viewPostsNum);
+      console.log("전체 페이지 수 "+totalPageNum);
+
+      if(isPrev){
+        console.log("이전 페이지 있음")
+      }else{
+        console.log("이전 페이지 없음")
+      }
+      if(isNext){
+        console.log("다음 페이지 있음")
+      }else{
+        console.log("다음 페이지 없음")
+      }
+
+      var html = '';
+
+      html +=`<li class="page-item ${isPrev? 'active': 'disabled'}">`;
+      html +=`<a class="page-link" href="/categories#${categoryName}?${(pageNum-1)}">Previous</a>`;
+      html +='</li>';
+      for(var i = 1; i <= totalPageNum; i++){
+        html +=`<li class="page-item ${i == pageNum? 'active': ''}">`;
+        html +=`<a class="page-link" href="/categories#${categoryName}?${i}">${i}</a>`;
+        html +='</li>';
+      }
+      html +=`<li class="page-item ${isNext? 'active': 'disabled'}">`;
+      html +=`<a class="page-link" href="/categories#${categoryName}?${(pageNum+1)}">Next</a>`;
+      html +='</li>';
+
+      $('.pagination').append(html);
+    }
+    function printPostsList(postsList){
+      var show = 6 * (pageNum - 1);
+      for(var i = 0+show; i < 6+show; i++){
+        var posts = postsList[i];
+
+        var html = "";
+        html += '<div class="col-12 col-md-6 col-lg-4">';
+        html += `<a href="${posts.url}" class="index-anchor">`;
+        html += '<div class="card rounded overflow-hidden">';
+        html += '<div class="image">';
+        if( posts.image ){
+          html += `<img src="${posts.image}" alt="${posts.title} 이미지" >`;
+        }
+        html += '<div class="card-body">';
+        html += `<h3 class="panel-title font-weight-bold">${posts.title}</h3>`;
+        html += `<p class="p-0 my-1 mx-0"><span class="post-meta"><small>${posts.date}</small></span></p>`;
+        html += `<p>${posts.content}</p>`;
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '</a>';
+        html += '</div>';
+
+        $('#postsList').append(html);
+      }
+    }
 </script>

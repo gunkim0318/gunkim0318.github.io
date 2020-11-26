@@ -67,9 +67,10 @@ img {
       height: 220px;
       object-fit: cover;
       object-position: center;
-      @media screen and (max-width: $on-palm) {
-        width: 100%;
-      }
+      width: 100%;
+      // @media screen and (max-width: $on-palm) {
+      //   width: 100%;
+      // }
     }
   }
 }
