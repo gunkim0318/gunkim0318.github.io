@@ -10,7 +10,22 @@ title: 김총 기술 블로그
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   공부한 것을 정리하는 블로그
+
   
+nav_title: "Gunkim Tech Blog"
+nav:
+  Home:
+    url: "/"
+  About:
+    url: "/about/"
+  Think:
+    url: "/categories#Think?1"
+  Dev:
+    Spring:
+    Java:
+    JavaScript:
+    Python:
+    "Error Log":
   
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://localhost:4000" # the base hostname & protocol for your site

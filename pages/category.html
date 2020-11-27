@@ -4,6 +4,8 @@ title: 카테고리
 permalink: /categories/
 ---
 <div class="home py-4 py-md-5">
+  <h1 class="title" style="text-align: center;"></h1>
+  <hr/>
   <div id="postsList" class="row">
   </div>
 </div> 
@@ -18,7 +20,7 @@ permalink: /categories/
   var categoryName = decodeURI(window.location.hash.substr(1, div-1));
   var viewPostsNum = 6;
   var pageNum = parseInt(window.location.hash.substr(div+1));
-  
+
   axios.get('/posts.json')
     .then(function (response) {
       var postsList = [];
@@ -30,6 +32,8 @@ permalink: /categories/
           postsList.push(posts);
         }
       }
+
+      $('.title').val(categoryName);
       pagination(postsList);
       printPostsList(postsList);
     }).catch(function (error) {
@@ -42,21 +46,6 @@ permalink: /categories/
       }
       var isPrev = pageNum != 1;
       var isNext = pageNum != totalPageNum;
-      
-      console.log('현재 페이지 : '+pageNum);
-      console.log("보여지는 게시글 수 "+viewPostsNum);
-      console.log("전체 페이지 수 "+totalPageNum);
-
-      if(isPrev){
-        console.log("이전 페이지 있음")
-      }else{
-        console.log("이전 페이지 없음")
-      }
-      if(isNext){
-        console.log("다음 페이지 있음")
-      }else{
-        console.log("다음 페이지 없음")
-      }
 
       var html = '';
 
