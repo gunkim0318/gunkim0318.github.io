@@ -5,9 +5,6 @@ category: Spring
 tag: [Spring Boot, Spring Security, Jwt]
 image: https://user-images.githubusercontent.com/45007556/91056380-e0252100-e660-11ea-8e46-241b38268250.png
 ---
-
-# 개요
-
 사실 아래 게시물은 스프링 부트 + 리액트 개발을 하는데 로그인 처리를 위해 JWT와 스프링 시큐리티를 연동해보기 위해서 스프링 시큐리티를 정리한 게시물이었다. 이번 게시물 이해를 위해서는 아래에 이전 포스트를 먼저 보고오면 좋을 듯 하다.
 
 이번에는 스프링 시큐리티 + JWT 연동을 정리해보려고 한다. 너무 글이 소스로 도배되는 것 같아서 임포트 부분을 제외하고, 핵심 소스 위주로 작성해보려고 한다. 자세한 소스는 여기서 확인해볼 수 있다. [예제 프로젝트](https://github.com/gunkim0318/springboot-security-jwt)

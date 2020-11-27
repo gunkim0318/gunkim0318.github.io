@@ -5,8 +5,6 @@ category: Spring
 tag: [Spring Boot, Mustache]
 ---
 
-# 개요
-
 스프링 시큐리티는 form 전송 시 csrf 토큰을 함께 전송해주어야 하는데, 타임리프나 다른 템플릿 엔진 같은 경우는 지원해주는 데 비해 로직 less인 머스테치의 경우는 지원해주지 않아 찾아본 방법
 
 # 방법1. 컨트롤러에서 CsrfToken을 발급하여 model로 전달 

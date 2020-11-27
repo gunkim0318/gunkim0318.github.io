@@ -6,10 +6,7 @@ tag: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91046271-122f8680-e653-11ea-8474-59cfaed336aa.png
 ---
 
-# 개요
-
 ![image](https://user-images.githubusercontent.com/45007556/91046271-122f8680-e653-11ea-8474-59cfaed336aa.png)
-
 스프링 부트에서는 에러가 발생 시 톰캣 에러 페이지가 아니라 해당 화면과 같이 **화이트라벨**이라고 불리는 화면을 통해 에러 화면이 나온다. 그래서 이 화면을 커스텀하는 방법에 대해서 정리해보려고 한다.
 
 # 화이트라벨 페이지 비활성화(꼭 안해도 됨)

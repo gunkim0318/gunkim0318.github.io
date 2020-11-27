@@ -7,7 +7,6 @@ image: https://user-images.githubusercontent.com/45007556/91055051-16fa3780-e65f
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91055051-16fa3780-e65f-11ea-95a2-9e8f6c8180c6.png)
-
 간혹 이렇게 비밀번호 입력 후 다시 한번 맞게 입력한건지 확인 비밀번호를 입력하는 경우가 있다. 이런 경우 기본적으로 지원하는 Validation 어노테이션으로는 단일 필드에 대한 유효성 검증만 처리가 가능하기 때문에 Validator을 커스텀해주어야 한다. 그 방법에 대해서 작성해보려고 한다.
 
 # DTO클래스

@@ -5,8 +5,8 @@ category: [Error Log]
 tag: [JavaScript]
 image: https://user-images.githubusercontent.com/45007556/91047538-32604500-e655-11ea-8aa8-50c53e222fc7.png
 ---
-
-![image](https://user-images.githubusercontent.com/45007556/91047538-32604500-e655-11ea-8aa8-50c53e222fc7.png)
+![image](https://user-images.githubusercontent.com/45007556/91047538-32604500-e655-11ea-8aa8-50c53e222fc7.png)  
+ajax를 통해 비동기 처리를 했을 때 200 상태코드를 반환하는데도 success 함수가 무슨 짓을 해도 호출이 되지 않아서 삽질한 내용에 대한 해결 방법.
 
 # 문제
 
@@ -25,8 +25,6 @@ $.ajax({
   },
 });
 ```
-
-위에 코드를 실행했을 때 200을 반환하는데도 success 함수가 무슨 짓을 해도 호출이 되지 않아서 삽질한 내용
 
 # 해결 방법
 

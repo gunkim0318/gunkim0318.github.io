@@ -8,9 +8,6 @@ image: https://user-images.githubusercontent.com/45007556/91050124-2bd3cc80-e659
 
 {% raw %}
 ![image](https://user-images.githubusercontent.com/45007556/91050124-2bd3cc80-e659-11ea-84bd-798ff4fcd272.png)
-
-# 개요
-
 이 콧수염 아저씨를 쓸때마다 느끼는거지만 Logic-Less라지만 너무 아무것도 없어서 불편할 때가 많다.(물론 사용 방법을 잘 몰라서 그럴 수도 있음) 검색 능력이 부족한건지 아무리 찾아봐도 머스테치에서 Validation를 사용하는 방법에 대해서는 나오지 않아서 개인적으로 연구해본 방법.
 
 다른 좋은 방법이 있다면 리플 바람.

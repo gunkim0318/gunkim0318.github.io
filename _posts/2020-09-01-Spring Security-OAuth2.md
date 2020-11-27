@@ -7,7 +7,7 @@ image: https://user-images.githubusercontent.com/45007556/91691565-cde83d00-eba2
 ---
 
 우리나라에서 가장 대표적인 플랫폼인 카카오, 구글, 페이스북, 네이버 외 깃허브에 대한 클라이언트 ID, 암호키 발급 방법을 정리해보려고 한다.
-개발 환경이기 떄문에 홈페이지 url은 http://localhost:8080 및 callback URL은 http://localhost:8080/login/oauth2/code/플랫폼명 으로 통일해줄 것이다.
+
 # 카카오
 
 [카카오 개발자 페이지](https://developers.kakao.com/)로 이동

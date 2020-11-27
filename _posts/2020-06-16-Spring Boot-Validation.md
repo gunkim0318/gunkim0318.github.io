@@ -5,6 +5,7 @@ category: Spring
 tag: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91046786-01cbdb80-e654-11ea-9f51-52887974386e.png
 ---
+스프링에서는 유효성 검증을 위한 Validation기능을 제공해주고 있다. 그래서 Validation기능 사용하는 방법에 대해서 포스팅해보려고 한다.
 
 ![image](https://user-images.githubusercontent.com/45007556/91046786-01cbdb80-e654-11ea-9f51-52887974386e.png)
 

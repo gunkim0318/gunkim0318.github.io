@@ -5,6 +5,7 @@ category: Error Log
 tags: [Jekyll]
 ---
 지킬 테마를 다운 받아서 실행할 때 간혹 지킬 버전 호환성 때문에 오류가 날 때가 있는데, 그럴 때마다 찾아보기 귀찮아서 정리해놓음.
+
 # 문제 상황
 ```bash
 gimgeon-ui-MacBook-Pro:kross-jekyll-master gunkim$ jekyll server

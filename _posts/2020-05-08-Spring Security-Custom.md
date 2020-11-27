@@ -5,6 +5,7 @@ category: Spring
 tag: [Spring Boot, Spring Security]
 image: https://user-images.githubusercontent.com/45007556/91045190-76e9e180-e651-11ea-9bea-7a4aa69564c8.png
 ---
+일반적으로 스프링 시큐리티를 사용할 때 간단하게 커스텀해서 사용하는 방법에 대해서 포스팅하려고 한다.
 
 # 스프링 시큐리티 흐름
 

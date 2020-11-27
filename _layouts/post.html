@@ -13,7 +13,7 @@ layout: default
           <time
             datetime="{{ page.date | date_to_xmlschema }}"
             itemprop="datePublished"
-            >{{ page.date | date: "%b %-d, %Y" }}</time
+            >{{ page.date | date: site.base_date_format[0]  }}</time
           >{% if page.author %} •
           <span itemprop="author" itemscope itemtype="http://schema.org/Person"
             ><span itemprop="name">{{ page.author }}</span></span

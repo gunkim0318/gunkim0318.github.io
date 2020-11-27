@@ -5,10 +5,7 @@ category: Spring
 tag: [Spring Boot]
 ---
 
-# 개요
-
 개발이나 테스트할 때 앱 실행 시 초기 데이터가 필요하거나 실행해야 하는 코드가 있는 경우가 있다.
-
 그럴 때 CommandLineRunner로 가능하다. CommandLineRunner를 사용하는 방법 중 Bean을 이용한 방법으로 작성해보려 한다.
 
 # Bean을 이용한 방법

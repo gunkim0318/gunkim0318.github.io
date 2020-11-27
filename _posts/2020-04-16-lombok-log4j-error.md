@@ -5,9 +5,7 @@ category: Error Log
 tag: [Spring]
 image: https://user-images.githubusercontent.com/45007556/91044098-b31c4280-e64f-11ea-9d85-4c4c7366a3a9.png
 ---
-
 # 문제
-
 프로젝트 생성 과정에서 원인을 알 수 없는 에러. 아래는 에러 내용.
 
 ```

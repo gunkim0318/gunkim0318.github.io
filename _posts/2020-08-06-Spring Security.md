@@ -1,15 +1,14 @@
 ---
 layout: post
-title: 스프링 시큐리티 완벽 정리
+title: 스프링 시큐리티 정리
 category: Spring
 tag: [Spring Boot, Spring Security]
 image: https://user-images.githubusercontent.com/45007556/91024296-b6550580-e632-11ea-874f-8618094b21e5.png
 ---
-
-![image](https://user-images.githubusercontent.com/45007556/91024296-b6550580-e632-11ea-874f-8618094b21e5.png)
+그 동안 스프링 시큐리티를 잘 알지 못하고 사용했었는데, 스프링 시큐리티에 대한 이해도를 높일 겸 정리해보려고 한다.
 
 # 스프링 시큐리티(Spring Security)란?
-
+![image](https://user-images.githubusercontent.com/45007556/91024296-b6550580-e632-11ea-874f-8618094b21e5.png)
 스프링 기반의 어플리케이션의 보안(인증과 권한, 인가 등)을 담당하는 스프링 하위 프레임워크이다.
 
 # 용어 정리
