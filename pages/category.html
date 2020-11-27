@@ -15,11 +15,14 @@ permalink: /categories/
     </ul>
   </div>
 </div>
+<script src="/js/pagingUtil.js"></script>
 <script>
   var div = window.location.hash.indexOf('?');
   var categoryName = decodeURI(window.location.hash.substr(1, div-1));
   var viewPostsNum = 6;
   var pageNum = parseInt(window.location.hash.substr(div+1));
+
+
 
   axios.get('/posts.json')
     .then(function (response) {
@@ -34,31 +37,26 @@ permalink: /categories/
       }
 
       $('.title').val(categoryName);
-      pagination(postsList);
+      var totalPostsNum = postsList.length;
+      var pagingUtil = new PagingUtil(pageNum, totalPostsNum);
+      pagination(pagingUtil);
+
       printPostsList(postsList);
     }).catch(function (error) {
       console.log(error);
     });
-    function pagination(postsList){
-      var totalPageNum = parseInt(postsList.length/6);
-      if(postsList.length%viewPostsNum != 0){
-        totalPageNum += 1;
-      }
-      var isPrev = pageNum != 1;
-      var isNext = pageNum != totalPageNum;
-
+    function pagination(pagingUtil){
       var html = '';
-
-      html +=`<li class="page-item ${isPrev? 'active': 'disabled'}">`;
-      html +=`<a class="page-link" href="/categories#${categoryName}?${(pageNum-1)}">Previous</a>`;
+      html +=`<li class="page-item ${pagingUtil.isPrev? 'active': 'disabled'}">`;
+      html +=`<a class="page-link" href="/categories#${categoryName}?${(pagingUtil.pageNum-1)}">Previous</a>`;
       html +='</li>';
-      for(var i = 1; i <= totalPageNum; i++){
-        html +=`<li class="page-item ${i == pageNum? 'active': ''}">`;
+      for(var i = 1; i <= pagingUtil.totalPageNum; i++){
+        html +=`<li class="page-item ${i == pagingUtil.pageNum? 'active': ''}">`;
         html +=`<a class="page-link" href="/categories#${categoryName}?${i}">${i}</a>`;
         html +='</li>';
       }
-      html +=`<li class="page-item ${isNext? 'active': 'disabled'}">`;
-      html +=`<a class="page-link" href="/categories#${categoryName}?${(pageNum+1)}">Next</a>`;
+      html +=`<li class="page-item ${pagingUtil.isNext? 'active': 'disabled'}">`;
+      html +=`<a class="page-link" href="/categories#${categoryName}?${(pagingUtil.pageNum+1)}">Next</a>`;
       html +='</li>';
 
       $('.pagination').append(html);
@@ -70,23 +68,32 @@ permalink: /categories/
 
         var html = "";
         html += '<div class="col-12 col-md-6 col-lg-4">';
-        html += `<a href="${posts.url}" class="index-anchor">`;
-        html += '<div class="card rounded overflow-hidden">';
-        html += '<div class="image">';
-        if( posts.image ){
-          html += `<img src="${posts.image}" alt="${posts.title} 이미지" >`;
-        }
-        html += '<div class="card-body">';
-        html += `<h3 class="panel-title font-weight-bold">${posts.title}</h3>`;
-        html += `<p class="p-0 my-1 mx-0"><span class="post-meta"><small>${posts.date}</small></span></p>`;
-        html += `<p>${posts.content}</p>`;
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</a>';
+          html += `<a href="${posts.url}" class="index-anchor">`;
+              html += '<div class="card rounded overflow-hidden">';
+                  html += '<div class="image">';
+                  if( posts.image ){
+                      html += `<img src="${posts.image}" alt="${posts.title} 이미지" >`;
+                  }
+                  html += '<div class="card-body">';
+                      html += `<h3 class="panel-title font-weight-bold">${posts.title}</h3>`;
+                      html += `<p class="p-0 my-1 mx-0"><span class="post-meta"><small>${posts.date}</small></span></p>`;
+                      html += `<p>${posts.content}</p>`;
+                      html += '</div>';
+                  html += '</div>';
+              html += '</div>';
+          html += '</a>';
         html += '</div>';
 
         $('#postsList').append(html);
       }
     }
+  function get_query(){
+      var url = document.location.href;
+      var qs = url.substring(url.indexOf('?') + 1).split('&');
+      for(var i = 0, result = {}; i < qs.length; i++){
+          qs[i] = qs[i].split('=');
+          result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+      }
+      return result;
+  }
 </script>
