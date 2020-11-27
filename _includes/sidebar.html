@@ -9,7 +9,15 @@
     />
     {% endif %}
   </div>
-
+  <div class="mt10 contents">
+    <!-- 목차 -->
+    <h2>Contents</h2>
+    <aside class="toc">
+      <div>
+        {% include toc.html html=content sanitize=true h_min=1 h_max=2 %}
+      </div>
+    </aside>
+  </div>
   <div class="mt10 recent">
     <h2>Recent articles</h2>
     <ul>
