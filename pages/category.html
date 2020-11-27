@@ -17,6 +17,10 @@ permalink: /categories/
 </div>
 <script src="/js/PagingUtil.js"></script>
 <script>
+  //스크립트 정리 필요, 검색 기능 추가 여지 있음.
+  //검색 기능은 나중에 필요해지면 그 때 추가하던지 할 예정.
+
+
   var div = window.location.hash.indexOf('?');
   var categoryName = decodeURI(window.location.hash.substr(1, div-1));
   var viewPostsNum = 6;
