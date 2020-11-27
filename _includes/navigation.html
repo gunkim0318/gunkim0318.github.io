@@ -16,14 +16,15 @@
     <ul class="navbar-nav ml-auto" style="margin-right: 90px;">
       {% for nav in site.nav %}
         <!--카테고리 목록-->
-        {% assign category_name = {{nav[0]}} %} 
+        {% assign category_name={{nav[0]}} %} 
         <!--서브 카테고리 목록 수-->
-        {% assign sub_cnt = {{nav[1].size}} %}
+        {% assign sub_cnt={{nav[1].size}} %}
 
         <!--최상위 카테고리-->
         {% if sub_cnt == 1 %}
+        {% assign url = {{nav[1]}} %}
         <li class="nav-item">
-          <a class="nav-link" href="{{nav[1]}}"
+          <a class="nav-link" href="{{url}}"
             >{{category_name}}<span class="sr-only">(current)</span></a
           >
         </li>

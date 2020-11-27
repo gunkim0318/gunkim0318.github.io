@@ -15,11 +15,11 @@ description: > # this means to ignore newlines until "baseurl:"
 nav_title: "Gunkim Tech Blog"
 nav:
   Home:
-    url: "/"
+    - "/"
   About:
-    url: "/about/"
+    - "/about/"
   Think:
-    url: "/categories#Think?1"
+    - "/categories#Think?1"
   Dev:
     Spring:
     Java:
