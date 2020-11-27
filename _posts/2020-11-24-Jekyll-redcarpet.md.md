@@ -1,10 +1,14 @@
-<!-- ---
+---
 layout: post
 title: "Jekyll 'Invalid Markdown processor given: redcarpet' 에러"
 category: Error Log
 tags: [Jekyll]
+excerpt_separator: <!--break-->
 ---
 오래된 지킬 테마를 다운 받고, 실행 시켰더니 처음 보는 종류의 빌드 오류가 발생해서 해당 내용 정리하려고 한다.
+
+<!--break-->
+
 # 문제 상황
 ```bash
 PS C:\Users\gunkim\workspace\git\gunkim0318.github.io> jekyll server
@@ -30,4 +34,4 @@ Markdown processor: "redcarpet" is not a valid Markdown processor.
 > redcarpet -> kramdown
 
 구버전 Jekyll 3.0 미만 테마들에 한해서 redcarpet 마크다운 프로세서를 사용할 경우 오류가 나는 상황이 발생해서 _config.yml의 markdown 항목의 **redcarpet**를 **kramdown**으로 변경해서 해결해주었음.
- -->
+
