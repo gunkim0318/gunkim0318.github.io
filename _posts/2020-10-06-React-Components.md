@@ -3,6 +3,7 @@ layout: post
 title: 리액트 초보의 컴포넌트에 대한 고민(feat.디자인 패턴)
 category: JavaScript
 tags: [React]
+image: https://user-images.githubusercontent.com/45007556/95151526-d6491e80-07c5-11eb-9388-5fd48280d712.png
 ---
 
 요즘 리액트에 관심이 생겨서 이것저것 해보는데 문뜩 고민이 생겼다. **컴포넌트는 재사용이 가능해야 하고, 독립적이어야 하고 작게 쪼개져야 한다**고 한다. 그런데 내가 짜논 코드를 문뜩 보니 재사용은 고사하고 그냥 jsp 코딩을 옮겨논 것 같아 리액트의 장점을 못 살리고 있다는 기분이 들었다.

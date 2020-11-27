@@ -3,6 +3,7 @@ layout: post
 title: 스프링 부트 - Mustache 기본 값 지정하기
 category: Spring
 tag: [Spring Boot, Mustache]
+image: https://user-images.githubusercontent.com/45007556/91050518-bd433e80-e659-11ea-883c-35c397a8a260.png
 ---
 
 {% raw %}

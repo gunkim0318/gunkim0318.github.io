@@ -3,6 +3,7 @@ layout: post
 title: 스프링 부트 Mustache에서 유효성 검사하기(Validation)
 category: Spring
 tag: [Spring Boot]
+image: https://user-images.githubusercontent.com/45007556/91050124-2bd3cc80-e659-11ea-84bd-798ff4fcd272.png
 ---
 
 {% raw %}

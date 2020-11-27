@@ -3,6 +3,7 @@ layout: post
 title: 스프링 부트 유효성 검증(Validation)을 커스텀하여 여러가지 항목에 대해 상호 검증하기
 category: Spring
 tag: [Spring Boot]
+image: https://user-images.githubusercontent.com/45007556/91055051-16fa3780-e65f-11ea-95a2-9e8f6c8180c6.png
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91055051-16fa3780-e65f-11ea-95a2-9e8f6c8180c6.png)

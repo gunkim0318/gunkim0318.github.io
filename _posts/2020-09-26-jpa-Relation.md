@@ -3,6 +3,7 @@ layout: post
 title: JPA 양방향 연관관계 나름 정리
 category: Java
 tags: [Java, Jpa]
+image: https://user-images.githubusercontent.com/45007556/94286367-de1bee00-ff8f-11ea-92a1-b1afe192b5bf.png
 ---
 
 양방향 연관관계에 대해서 다룰 일이 있었는데, 양방향인데 저장할 때 어느쪽에다가 저장을 해야 하는지, 양쪽 다 해야 하는지 등이 헷갈려서 정리해보았다.

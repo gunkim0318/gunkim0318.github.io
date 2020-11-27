@@ -3,6 +3,7 @@ layout: post
 title: 스프링 부트(Spring Boot)+리액트(React) 함께 빌드하기
 category: Spring
 tag: [Spring Boot, React]
+image: https://user-images.githubusercontent.com/45007556/91056894-7d805500-e661-11ea-994d-e8a0f3cb16b9.png
 ---
 
 # 개요

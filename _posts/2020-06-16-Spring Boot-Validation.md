@@ -3,6 +3,7 @@ layout: post
 title: 스프링 부트 유효성(Validation) 검증하기
 category: Spring
 tag: [Spring Boot]
+image: https://user-images.githubusercontent.com/45007556/91046786-01cbdb80-e654-11ea-9f51-52887974386e.png
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91046786-01cbdb80-e654-11ea-9f51-52887974386e.png)

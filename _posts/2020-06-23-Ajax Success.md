@@ -3,6 +3,7 @@ layout: post
 title: ajax 200 성공 반환하는데 success 호출 안되는 문제
 category: [Error Log]
 tag: [JavaScript]
+image: https://user-images.githubusercontent.com/45007556/91047538-32604500-e655-11ea-8aa8-50c53e222fc7.png
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91047538-32604500-e655-11ea-8aa8-50c53e222fc7.png)

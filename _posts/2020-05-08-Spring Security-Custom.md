@@ -3,6 +3,7 @@ layout: post
 title: 스프링 부트 - 스프링 시큐리티 간단 커스텀
 category: Spring
 tag: [Spring Boot, Spring Security]
+image: https://user-images.githubusercontent.com/45007556/91045190-76e9e180-e651-11ea-9bea-7a4aa69564c8.png
 ---
 
 # 스프링 시큐리티 흐름
