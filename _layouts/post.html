@@ -20,6 +20,15 @@ layout: default
           >{% endif %}
         </p>
       </header>
+      <div class="mt10 mb20 contents con1">
+        <!-- 목차 -->
+        <h2>Contents</h2>
+        <aside class="toc">
+          <div>
+            {% include toc.html html=content sanitize=true h_min=1 h_max=2 %}
+          </div>
+        </aside>
+      </div>
       <div class="post-content" itemprop="articleBody">{{ content }}</div>
     </article>
 

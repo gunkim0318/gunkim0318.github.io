@@ -2,3 +2,17 @@
     text-align: center;
     font-weight: bold;
 }
+.contents {
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+}
+.con1 {
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+.con2 {
+    @media(max-width: 768px) {
+        display: none;
+    }
+}
