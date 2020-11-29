@@ -4,7 +4,7 @@ title: 카테고리
 permalink: /categories/
 ---
 <div class="home py-4 py-md-5">
-  <h1 class="title" style="text-align: center;"></h1>
+  <h1 class="cate_title"></h1>
   <hr/>
   <div id="postsList" class="row">
   </div>
@@ -40,7 +40,7 @@ permalink: /categories/
         }
       }
 
-      $('.title').val(categoryName);
+      $('.cate_title').append(`"${categoryName}"`);
       var totalPostsNum = postsList.length;
       var pagingUtil = new PagingUtil(pageNum, totalPostsNum);
       pagination(pagingUtil);
@@ -91,13 +91,4 @@ permalink: /categories/
         $('#postsList').append(html);
       }
     }
-  function get_query(){
-      var url = document.location.href;
-      var qs = url.substring(url.indexOf('?') + 1).split('&');
-      for(var i = 0, result = {}; i < qs.length; i++){
-          qs[i] = qs[i].split('=');
-          result[qs[i][0]] = decodeURIComponent(qs[i][1]);
-      }
-      return result;
-  }
 </script>
