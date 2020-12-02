@@ -5,6 +5,17 @@
 .contents {
     border: 1px solid #e8e8e8;
     padding: 10px;
+
+    ul {
+        padding-left:  10px;
+        li {
+            padding-left: 0px;
+
+            ul li {
+                padding-left: 30px;
+            }
+        }
+    }
 }
 .con1 {
     @media(min-width: 768px) {
