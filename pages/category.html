@@ -3,11 +3,12 @@ layout: default
 title: 카테고리
 permalink: /categories/
 ---
-<div class="home py-4 py-md-5">
+<div class="home py-1 py-md-5">
   <h1 class="cate_title"></h1>
   <hr/>
   <div id="postsList" class="row">
   </div>
+  <hr/>
 </div> 
 <div class="row justify-content-center">
   <div class="col-md-4">
@@ -73,7 +74,7 @@ permalink: /categories/
         var html = "";
         html += '<div class="col-12 col-md-6 col-lg-4">';
           html += `<a href="${posts.url}" class="index-anchor">`;
-              html += '<div class="card rounded overflow-hidden">';
+              html += '<div class="card rounded overflow-hidden" style="margin-bottom: 0px;" >';
                   html += '<div class="image">';
                   if( posts.image ){
                       html += `<img src="${posts.image}" alt="${posts.title} 이미지" >`;
