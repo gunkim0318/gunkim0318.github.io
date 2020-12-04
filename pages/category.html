@@ -40,7 +40,7 @@ permalink: /categories/
         }
       }
 
-      $('.cate_title').append(`"${categoryName}"`);
+      $('.cate_title').append(categoryName);
       var totalPostsNum = postsList.length;
       var pagingUtil = new PagingUtil(pageNum, totalPostsNum);
       pagination(pagingUtil);
