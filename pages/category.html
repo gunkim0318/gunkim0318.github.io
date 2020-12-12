@@ -18,16 +18,13 @@ permalink: /categories/
 </div>
 <script src="/js/PagingUtil.js"></script>
 <script>
-  {% comment %}
-    스크립트 정리 필요, 검색 기능 추가 여지 있음.
-    검색 기능은 나중에 필요해지면 그 때 추가하던지 할 예정.
-  {% endcomment %}
-  var div = window.location.hash.indexOf('?');
-  var categoryName = decodeURI(window.location.hash.substr(1, div-1));
-  var viewPostsNum = 6;
-  var pageNum = parseInt(window.location.hash.substr(div+1));
+  var categoryName = decodeURI(window.location.hash.substr(1));
+  var pageNum = new URLSearchParams(location.search).get("pageNum");
 
+  pageNum = pageNum != null ? pageNum:1;
 
+  console.log(categoryName);
+  console.log(pageNum);
 
   axios.get('/posts.json')
     .then(function (response) {
@@ -53,15 +50,15 @@ permalink: /categories/
     function pagination(pagingUtil){
       var html = '';
       html +=`<li class="page-item ${pagingUtil.isPrev? 'active': 'disabled'}">`;
-      html +=`<a class="page-link" href="/categories#${categoryName}?${(pagingUtil.pageNum-1)}">Previous</a>`;
+      html +=`<a class="page-link" href="/categories?pageNum=${(parseInt(pagingUtil.pageNum)-1)}#${categoryName}">Previous</a>`;
       html +='</li>';
       for(var i = 1; i <= pagingUtil.totalPageNum; i++){
         html +=`<li class="page-item ${i == pagingUtil.pageNum? 'active': ''}">`;
-        html +=`<a class="page-link" href="/categories#${categoryName}?${i}">${i}</a>`;
+        html +=`<a class="page-link" href="/categories?pageNum=${i}#${categoryName}">${i}</a>`;
         html +='</li>';
       }
       html +=`<li class="page-item ${pagingUtil.isNext? 'active': 'disabled'}">`;
-      html +=`<a class="page-link" href="/categories#${categoryName}?${(pagingUtil.pageNum+1)}">Next</a>`;
+      html +=`<a class="page-link" href="/categories?pageNum=${(parseInt(pagingUtil.pageNum)+1)}#${categoryName}">Next</a>`;
       html +='</li>';
 
       $('.pagination').append(html);
