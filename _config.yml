@@ -19,7 +19,7 @@ nav:
   About:
     - "/about/"
   Think:
-    - "/categories#Think"
+    - "/categories?categoryName=Think"
   Dev:
     Spring:
     Java:
