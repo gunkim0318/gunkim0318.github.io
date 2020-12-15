@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GoDaddy를 통한 도메인 구매 및 깃허브 페이지 연동하기
-category: Think
+category: Other
 tags: [Domain, Dns]
 image: https://user-images.githubusercontent.com/45007556/96098192-cd1a2900-0f0c-11eb-943f-df3646c9a897.png
 ---

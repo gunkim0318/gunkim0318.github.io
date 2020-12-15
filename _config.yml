@@ -25,6 +25,7 @@ nav:
     Java:
     JavaScript:
     Python:
+    Other:
     "Error Log":
   
 baseurl: "" # the subpath of your site, e.g. /blog
