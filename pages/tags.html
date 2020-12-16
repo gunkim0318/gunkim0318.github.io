@@ -51,15 +51,15 @@ permalink: /tags/
       function pagination(pagingUtil){
         var html = '';
         html +=`<li class="page-item ${pagingUtil.isPrev? 'active': 'disabled'}">`;
-        html +=`<a class="page-link" href="/categories?categoryName=${tagName}&pageNum=${(parseInt(pagingUtil.pageNum)-1)}#${tagName}">Previous</a>`;
+        html +=`<a class="page-link" href="/tags?tagName=${tagName}&pageNum=${(parseInt(pagingUtil.pageNum)-1)}#${tagName}">Previous</a>`;
         html +='</li>';
         for(var i = 1; i <= pagingUtil.totalPageNum; i++){
           html +=`<li class="page-item ${i == pagingUtil.pageNum? 'active': ''}">`;
-          html +=`<a class="page-link" href="/categories?categoryName=${tagName}&pageNum=${i}">${i}</a>`;
+          html +=`<a class="page-link" href="/tags?tagName=${tagName}&pageNum=${i}">${i}</a>`;
           html +='</li>';
         }
         html +=`<li class="page-item ${pagingUtil.isNext? 'active': 'disabled'}">`;
-        html +=`<a class="page-link" href="/categories?categoryName=${tagName}&pageNum=${(parseInt(pagingUtil.pageNum)+1)}#${tagName}">Next</a>`;
+        html +=`<a class="page-link" href="/tags?tagName=${tagName}&pageNum=${(parseInt(pagingUtil.pageNum)+1)}#${tagName}">Next</a>`;
         html +='</li>';
   
         $('.pagination').append(html);
