@@ -24,9 +24,6 @@ permalink: /categories/
 
   pageNum = pageNum != null ? pageNum:1;
 
-  console.log(categoryName);
-  console.log(pageNum);
-
   axios.get('/posts.json')
     .then(function (response) {
       var postsList = [];
