@@ -1,4 +1,4 @@
-.cate_title{
+.cate_title, .tag_title{
     text-align: center;
     font-weight: bold;
 }
@@ -17,6 +17,7 @@
         }
     }
 }
+//게시글 목차
 .con1 {
     @media(min-width: 768px) {
         display: none;
@@ -25,5 +26,15 @@
 .con2 {
     @media(max-width: 768px) {
         display: none;
+    }
+}
+//태그
+.tags {
+    a {
+        background: #ececec;
+        color: black;
+        padding: 2px 5px;
+        border-radius: 5px;
+        font-weight: bold;
     }
 }

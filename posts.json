@@ -9,6 +9,7 @@
       "content": "{{ post.excerpt | smartify | strip_html | strip_newlines | truncate: 150 }}",
       "date": "{{ post.date | date: site.base_date_format[0] }}",
       "image": "{{ post.image }}",
+      "tags": "{% for tag in post.tags %}{{ tag }}-{% endfor %}",
       "categories": {{ post.categories | jsonify }},
       "url": "{{ post.url }}"
     }

@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="row">
   <div class="col-md-8">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -14,10 +13,17 @@ layout: default
             datetime="{{ page.date | date_to_xmlschema }}"
             itemprop="datePublished"
             >{{ page.date | date: site.base_date_format[0]  }}</time
-          >{% if page.author %} •
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person"
-            ><span itemprop="name">{{ page.author }}</span></span
-          >{% endif %}
+          >&nbsp;
+          <span class="tags">
+            {% if page.tags %} | 
+              {% for tag in page.tags %}
+                <a
+                  href="/tags?tagName={{ tag }}"
+                  class="post-tag"
+                  >{{ tag }}</a>
+              {% endfor %} 
+            {% endif %}
+          </span>
         </p>
       </header>
       <div class="mt10 mb20 contents con1">
