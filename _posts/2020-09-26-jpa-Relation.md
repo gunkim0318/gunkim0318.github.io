@@ -94,7 +94,7 @@ public class Student {
 주인인 쪽은 @JoinColumn을 사용하고, 주인이 아닌 쪽은 mappedBy를 사용해준다.
 다대일 연관관계에서는 주로 @ManyToOne쪽을 주인으로 설정한다.
 
-@ManyToOne에는 mappedBy속성이 없고, @ManyToOne쪽을 주인으로 설정할 순 있지만 이 포스트에서 다루진 않겠다.
+@ManyToOne에는 mappedBy속성이 없고, @OneToMany쪽을 주인으로 설정하는 방법도 있지만 다루진 않겠다.
 
 # 저장 방법
 
