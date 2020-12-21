@@ -46,3 +46,6 @@ bower_components
 
 # 캐시 파일
 .jekyll-cache
+
+# Gemfile 찌꺼기
+Gemfile.lock
