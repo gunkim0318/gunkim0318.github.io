@@ -17,4 +17,8 @@ var PagingUtil = function(pageNum, totalPostsNum){
 
     this.isPrev = pageNum != 1;
     this.isNext = pageNum != this.totalPageNum;
+
+    if(this.totalPageNum == 0){
+        this.isNext = false;
+    }
 }
