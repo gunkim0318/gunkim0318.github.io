@@ -5,7 +5,7 @@
   "posts": [
     {% for post in site.posts %}
     {
-      "title": "{{ post.title }}",
+      "title": "{{ post.title | truncate: 25 }}",
       "content": "{{ post.excerpt | smartify | strip_html | strip_newlines | truncate: 150 }}",
       "date": "{{ post.date | date: site.base_date_format[0] }}",
       "image": "{{ post.image }}",
