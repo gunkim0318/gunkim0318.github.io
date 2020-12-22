@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JPA 영속성(Persistence) 정리
-category: Java
+category: Spring
 tags: [Jpa, Java]
 image: https://user-images.githubusercontent.com/45007556/97259497-3e879f00-185e-11eb-9fe2-688c9012a85b.png
 ---
