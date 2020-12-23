@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hashtable과 HashMap의 무슨 차이가 있을까?
+title: Hashtable과 HashMap는 무슨 차이일까?
 category: Data Structure
 image: https://user-images.githubusercontent.com/45007556/102892298-0342ce80-44a3-11eb-97cc-981365354e3a.png
 tags: ['Java', 'Data Structure']
@@ -27,7 +27,7 @@ public class Main {
 ```
 
 # Hashtable과 HashMap은 형제다
-어째서 HashMap이랑 똑같을까? 의문을 풀기 위해서 찾아봤는데 이 둘은 동일하게 Map을 구현하고 있는 녀석이라는 것을 알아냈다. 그렇기 떄문에 Map을 구현하고 있는 만큼 기능은 동일하다는 것을 유추할 수 있다.
+어째서 HashMap이랑 똑같을까? 의문을 풀기 위해서 찾아봤는데 이 둘은 동일하게 Map을 구현하고 있는 녀석이라는 것을 알아냈다. 그렇기 때문에 Map을 구현하고 있는 만큼 기능은 동일하다는 것을 유추할 수 있다.
 ![이미지](https://user-images.githubusercontent.com/45007556/102892298-0342ce80-44a3-11eb-97cc-981365354e3a.png)
 
 # 그럼 뭐가 다를까?
