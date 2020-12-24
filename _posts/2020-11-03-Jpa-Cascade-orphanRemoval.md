@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JPA 영속성 전이와 고아 객체(orphan)
-category: Java
+category: Spring
 tags: [Jpa]
 ---
 
