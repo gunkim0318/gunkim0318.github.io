@@ -5,7 +5,7 @@ category: Spring
 image: https://user-images.githubusercontent.com/45007556/103108226-2fb83f80-4689-11eb-8b48-e44e8c043605.png
 tags: ['Java', 'Spring Boot']
 ---
-한동안 JPA만 사용해오다가 오랜만에 MyBatis를 사용할 일이 생겨서 설정했던 설정 방법에 대해서 정리해보려고 한다. 그런데 스프링 부트는 워낙 설정이 간편해서 MyBatis 같은 경우는 설정이 정말 매우 간단하다. [예제 프로젝트](https://github.com/gunkim0318/SpringBoot-MyBatis-Logback-Sample.git)
+한동안 JPA만 사용해오다가 오랜만에 MyBatis를 사용할 일이 생겨서 설정했던 설정 방법에 대해서 정리해보려고 한다. 그런데 스프링 부트는 워낙 설정이 간편해서 MyBatis 같은 경우는 설정이 정말 매우 간단하다. [예제 프로젝트](https://github.com/gunkim0318/SpringBoot-Mysql-MyBatis-Logback-Sample/tree/mysql-mybatis)
 
 # 의존성을 추가하기
 Maven을 사용할 경우 pom.xml에 Gradle을 사용할 경우 build.gradle에 의존성을 추가해주면 된다.
