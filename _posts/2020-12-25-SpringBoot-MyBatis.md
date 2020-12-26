@@ -42,7 +42,7 @@ spring:
     password: # 패스워드
 ```
 ## 테스트코드 작성하기
-*/src/test/com/sample/app/db/ConnectionTests.java*
+***/src/test/com/sample/app/db/ConnectionTests.java***
 ```java
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -69,7 +69,7 @@ public class ConnectionTests {
 
 # MyBatis 설정 및 테스트
 ## 설정하기
-*/src/main/com/sample/app/config/MyBatisConfig.java*
+***/src/main/com/sample/app/config/MyBatisConfig.java***
 ```java
 @RequiredArgsConstructor
 @Configuration
