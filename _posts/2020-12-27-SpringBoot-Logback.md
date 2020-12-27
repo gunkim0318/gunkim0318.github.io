@@ -2,7 +2,7 @@
 layout: post
 title: 스프링 부트에서 logback 설정하기
 category: Spring
-tags: ['Java', 'Spring Boot']
+tags: ['Spring Boot']
 image: https://user-images.githubusercontent.com/45007556/103150641-815fe780-47b9-11eb-955d-9c2ba03264a8.png
 ---
 스프링 부트에 마이바티스를 설정하면서 로그를 이쁘게 찍으려고 logback 설정했던 방법에 대해서 정리하려고 한다.
