@@ -8,6 +8,7 @@ image: https://user-images.githubusercontent.com/45007556/103326060-071db480-4a9
 apt-get을 통해 설치한 Gradle 버전이 4.4.1 버전이라 5버전 이상의 최신버전이 필요했기에 Gradle 최신 버전으로 설치하는 방법을 적어보려 한다.
 
 # Jdk SE 8 이상 버전을 설치해주자
+Gradle을 사용하려면 Jdk SE 8 이상 버전이 필요하기 때문에 jdk를 설치한다. 
 ## Jdk 설치
 ```bash
 sudo apt update
