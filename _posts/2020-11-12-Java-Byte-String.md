@@ -3,6 +3,7 @@ layout: post
 title: Java Byte<->String 변환 방법 및 바이트로 자르기
 category: Java
 tags: [Java]
+image: https://user-images.githubusercontent.com/45007556/103327958-30424300-4a9a-11eb-810d-70513ba86130.png
 ---
 
 보통 문자열을 자릿수로 자를 때는 String클래스에서 지원해주는 substring() 메소드를 사용해서 자르는데, 이번에는 특별하게 문자열을 바이트로 잘라야 하는 경우가 발생해서 해당 방법을 정리해보려고 한다.

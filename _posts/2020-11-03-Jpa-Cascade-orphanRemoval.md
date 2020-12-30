@@ -3,6 +3,7 @@ layout: post
 title: JPA 영속성 전이와 고아 객체(orphan)
 category: Spring
 tags: [Jpa]
+image: https://user-images.githubusercontent.com/45007556/103327917-04bf5880-4a9a-11eb-8610-c88a74f619bc.png
 ---
 
 영속성 전이와 관련되어서 크게 삽질한 내용이 있어서 정리할 겸 같이 작성해보려고 한다.

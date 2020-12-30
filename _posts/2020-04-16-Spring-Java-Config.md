@@ -3,6 +3,7 @@ layout: post
 title: 스프링을 자바로 설정하기
 category: Spring
 tag: [Spring]
+image: https://user-images.githubusercontent.com/45007556/103328175-0e958b80-4a9b-11eb-9db7-66230e0f057c.png
 ---
 
 스프링을 그 동안 xml위주로 설정하다가 스프링 부트처럼 java기반으로 설정하는 방법에 대해서 포스팅해보려고 한다.

@@ -3,6 +3,7 @@ layout: post
 title: 스프링 HikariCP를 이용한 커넥션 풀 사용하기
 category: Spring
 tag: [Spring]
+image: https://user-images.githubusercontent.com/45007556/103328175-0e958b80-4a9b-11eb-9db7-66230e0f057c.png
 ---
 커넥션풀은 커넥션을 미리 만들어놨다가, 가져다 쓰기 위해 사용하는 녀석이다. 커넥션 풀 사용하는 방법에 대해서 포스팅하려고 한다.
 
