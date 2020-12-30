@@ -3,6 +3,7 @@ layout: post
 title: "Jekyll 'Invalid Markdown processor given: redcarpet' 에러"
 category: Error Log
 tags: [Jekyll]
+image: https://user-images.githubusercontent.com/45007556/103326178-75fb0d80-4a92-11eb-983c-dbd6adc70b15.png
 excerpt_separator: <!--break-->
 ---
 오래된 지킬 테마를 다운 받고, 실행 시켰더니 처음 보는 종류의 빌드 오류가 발생해서 해당 내용 정리하려고 한다.
