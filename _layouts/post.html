@@ -15,6 +15,17 @@ layout: default
             >{{ page.date | date: site.base_date_format[0]  }}</time
           >&nbsp;
           <span class="tags">
+            {% if page.category %} | 
+              {% for category in page.category %}
+                <a
+                  href="/categories/?categoryName={{ category }}"
+                  class="post-tag"
+                  style="background: #e88eff;"
+                  >{{ category }}</a>
+              {% endfor %} 
+            {% endif %}
+          </span>
+          <span class="tags">
             {% if page.tags %} | 
               {% for tag in page.tags %}
                 <a
