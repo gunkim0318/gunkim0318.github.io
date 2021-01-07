@@ -8,6 +8,12 @@ type: article
   source0=layout.sharing source1=page.sharing -%}
 {%- assign _sharing = __return -%}
 
+
+<div class="card" style="margin: 0 auto; margin-top: 40px; margin-bottom: 40px;">
+  <div class="card__image">
+    <img class="image" src="{{ page.image }}"/>
+  </div>
+</div>
 <div class="layout--article">
   {%- include article/top/custom.html -%}
 
