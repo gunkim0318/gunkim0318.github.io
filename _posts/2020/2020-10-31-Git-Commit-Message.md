@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: Git 커밋 메세지를 수정하는 방법
 category: Other
 tags: [Git]
 image: https://user-images.githubusercontent.com/45007556/103328013-6a134980-4a9a-11eb-9d40-6b44a80658ff.png
+subtitle: Git 커밋할 때 메세지를 잘못 입력했을 때 수정할 방법에 대해서 알아보자
 ---
 
 깃에 커밋하다가 메시지가 잘못 올라간 게 있어서 수정하는 방법에 대해서 알아본 것에 대해서 정리하려고 한다.

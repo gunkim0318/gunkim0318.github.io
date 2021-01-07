@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: GoDaddy를 통한 도메인 구매 및 깃허브 페이지 연동하기
 category: Other
 tags: [Domain, Dns]
 image: https://user-images.githubusercontent.com/45007556/96098192-cd1a2900-0f0c-11eb-943f-df3646c9a897.png
+subtitle: 깃허브 기본 도메인은 지겹다. 사설 도메인을 구매하고 연동해본다
 ---
 
 원래 그 동안 기본 도메인인 gunkim0318.github.io를 이용해오다가 아이디를 생일이랑 이름으로 만들어놔서 별로 안 이쁘기도 하고, 마침 개발자답게 dev 도메인이 탐나기도 해서 알아보던 중 GoDaddy를 통해 구입하고 연동한 방법 등에 대해서 정리하려고 한다.

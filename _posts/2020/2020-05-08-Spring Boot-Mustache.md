@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: 스프링 부트 머스테치 - 시큐리티 form 전송 시 403 에러 해결법
 category: Spring
 tag: [Spring Boot, Mustache]
 image: https://user-images.githubusercontent.com/45007556/103328259-76e46d00-4a9b-11eb-91a0-6790f4be29ab.png
+subtitle: Mustache를 사용할 때 스프링 시큐리티 csrf토큰을 어떻게 삽입해야 하는지 알아보자
 ---
 
 스프링 시큐리티는 form 전송 시 csrf 토큰을 함께 전송해주어야 하는데, 타임리프나 다른 템플릿 엔진 같은 경우는 지원해주는 데 비해 로직 less인 머스테치의 경우는 지원해주지 않아 찾아본 방법

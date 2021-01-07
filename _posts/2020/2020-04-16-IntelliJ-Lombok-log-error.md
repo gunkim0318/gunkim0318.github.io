@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: 인텔리제이 Lombok 사용 시 Gradle Build 에러
 category: Error Log
 tag: [Spring, Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91044839-e7443300-e650-11ea-8fab-4558843075ed.png
+subtitle: 인텔리제이에서 Lombok 사용 시 발생하는 cannot find symbol 에러를 해결해보자
 ---
 
 # 문제

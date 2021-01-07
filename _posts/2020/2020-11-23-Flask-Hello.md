@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: Flask 웹 프레임워크를 이용한 Hello World! 출력하기
 category: Python
 tags: [Python, Flask]
 image: https://user-images.githubusercontent.com/45007556/99931497-1a08df00-2d98-11eb-8b9a-8024dd4b4a69.png
+subtitle: 매우 경량화되어 있어 매력이 있는 Flask를 사용해 간단한 웹서버를 띄워보자
 ---
 
 플라스크를 깊게 사용은 안해보더라도, 나중에 플라스크를 써야할 때 내가 다시 찾아보려고 정리해놓으려고 한다.

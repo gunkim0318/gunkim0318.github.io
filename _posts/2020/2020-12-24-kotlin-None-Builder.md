@@ -1,9 +1,9 @@
 ---
-layout: post
 title: 코틀린에서 빌더 패턴이 필요없는 이유
 category: Other
 image: https://user-images.githubusercontent.com/45007556/103047952-61210480-45d0-11eb-81e6-c7c7ffc8540a.png
 tags: ['Java', 'Kotlin']
+subtitle: Kotlin에서는 Builder Pattern을 사용하지 않더라도 더 쉬운 방법이 있다
 ---
 코틀린으로 스프링 기반 백엔드 개발을 할 때 Lombok을 통한 빌더 패턴을 사용하지 못해서 이것만 해결되면 진짜 좋을텐데... 하면서 사용하다가 코틀린에서는 굳이 빌더 패턴을 사용하지 않더라도 비슷하게 개발이 가능하단 것을 알게 되어서 정리해보려고 한다.
 

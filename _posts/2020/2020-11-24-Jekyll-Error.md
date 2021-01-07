@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: Jekyll 하위 버전 실행 시 오류
 category: Error Log
 tags: [Jekyll]
 image: https://user-images.githubusercontent.com/45007556/103326178-75fb0d80-4a92-11eb-983c-dbd6adc70b15.png
+subtitle: Jekyll 버전 호환성 오류에 대한 해결 방법을 알아보자
 ---
 지킬 테마를 다운 받아서 실행할 때 간혹 지킬 버전 호환성 때문에 오류가 날 때가 있는데, 그럴 때마다 찾아보기 귀찮아서 정리해놓음.
 

@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: 스프링 부트 - Mustache 기본 값 지정하기
 category: Spring
 tag: [Spring Boot, Mustache]
 image: https://user-images.githubusercontent.com/45007556/91050518-bd433e80-e659-11ea-883c-35c397a8a260.png
+subtitle: Mustache 사용 시 값이 없을 시 자꾸 오류를 뱉어낸다. 번거로운데 해결 방법은 없을까? 그 해결 방법에 대해 알아보자
 ---
 
 {% raw %}

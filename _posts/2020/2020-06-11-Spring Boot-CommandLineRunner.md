@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: 스프링 부트 실행 시 특정 코드 실행하기(테스트 데이터 넣기)
 category: Spring
 tag: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/103328259-76e46d00-4a9b-11eb-91a0-6790f4be29ab.png
+subtitle: 매번 테스트 데이터를 넣기 귀찮다. 테스트 데이터를 자동으로 넣어주자
 ---
 
 개발이나 테스트할 때 앱 실행 시 초기 데이터가 필요하거나 실행해야 하는 코드가 있는 경우가 있다.

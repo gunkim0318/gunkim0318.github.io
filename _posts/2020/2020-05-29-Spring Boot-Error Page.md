@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: 스프링 부트 에러 페이지 적용하기
 category: Spring
 tag: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91046271-122f8680-e653-11ea-8474-59cfaed336aa.png
+subtitle: 공통으로 사용할 에러 페이지를 구현해보자
 ---
 
 ![image](https://user-images.githubusercontent.com/45007556/91046271-122f8680-e653-11ea-8474-59cfaed336aa.png)

@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: ECMAScript? ES? 그게 뭘까?
 category: JavaScript
 tags: [JavaScript]
 image: https://user-images.githubusercontent.com/45007556/99826279-7c48c080-2b9b-11eb-8cce-3c92f971c803.png
+subtitle: JavaScript는 뭐고 ECMAScript는 뭘까? 이에 대해서 정리해본다
 ---
 자바스크립트를 사용하면서 es5, es6 문법들을 사용하면서 대충 자바스크립트 버전 아니야? 라고 생각하고 사용했었는데, 어떻게 보면 맞다고 할 수도 있는데 어떻게 보면 아니라고 할 수 있다. 문득 궁금해져서 간략하게 나마 정리하려고 한다.
 

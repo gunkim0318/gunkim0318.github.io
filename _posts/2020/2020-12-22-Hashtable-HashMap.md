@@ -1,9 +1,10 @@
 ---
-layout: post
+
 title: Hashtable과 HashMap는 무슨 차이일까?
 category: Data Structure
 image: https://user-images.githubusercontent.com/45007556/102892298-0342ce80-44a3-11eb-97cc-981365354e3a.png
 tags: ['Java', 'Data Structure']
+subtitle: 이제 제목에 대한 답변을 할 수 있는 사람이 되자
 ---
 Hashtable과 HashMap이 무슨 차이야?라는 질문을 우연히 듣고 궁금해서 추적해본 내용을 포스팅해보려고 한다.
 
