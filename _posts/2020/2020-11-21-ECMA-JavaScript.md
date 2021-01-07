@@ -11,6 +11,7 @@ subtitle: JavaScript는 뭐고 ECMAScript는 뭘까? 이에 대해서 정리해�
 # ES(ECMAScript)가 뭐야?
 **ES? 자바스크립트 버전 아니었어? 뜬금없이 ECMAScript가 뭐야?** 생각이 들 수도 있다. 
 ![image](https://user-images.githubusercontent.com/45007556/99825837-e7de5e00-2b9a-11eb-86cd-3fb684123ec0.png)
+
 ECMAScript는 쉽게 말하면 ECMA라는 비영리 단체가 자기네들이 만든 ECMA-262라는 기술 규격에 따라서 정의한 표준화된 스크립트 언어다. ES5, ES6 등은 ECMAScript의 버전5, 버전6 같은 개념으로 받아들이면 된다.
 
 # 그럼 JS(JavaScript)랑은 뭐가 달라?
@@ -57,4 +58,5 @@ es6를 지원하지 않으면 es6 이하 버전 문법들만을 사용해서 개
 
 ## 바벨(Babel)을 이용한 방법
 ![1_DGJT51DxMSbsRNuF6J_c6Q](https://user-images.githubusercontent.com/45007556/99864982-e5572500-2be9-11eb-8d57-06e5cccaae37.jpeg)
+
 그래서 이를 해결하기 위해 나온 방법이 컴파일러 및 트랜스파일러의 역할을 하는 바벨(Babel)을 이용해서 es6로 작성된 코드를 es5로 변환해서 배포하는 방법이다.
