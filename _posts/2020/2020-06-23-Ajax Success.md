@@ -1,7 +1,7 @@
 ---
 
 title: ajax 200 성공 반환하는데 success 호출 안되는 문제
-category: [Error Log]
+# category:[Error Log]
 tag: [JavaScript]
 image: https://user-images.githubusercontent.com/45007556/91047538-32604500-e655-11ea-8aa8-50c53e222fc7.png
 subtitle: 분명 요청에 성공했는데 왜 success 함수가 실행되지 않을까? 그 해결 방법에 대해 알아보자

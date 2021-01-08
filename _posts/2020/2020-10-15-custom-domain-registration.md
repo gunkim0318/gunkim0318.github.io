@@ -1,7 +1,7 @@
 ---
 
 title: GoDaddy를 통한 도메인 구매 및 깃허브 페이지 연동하기
-category: Other
+# category:Other
 tags: [Dns]
 image: https://user-images.githubusercontent.com/45007556/96098192-cd1a2900-0f0c-11eb-943f-df3646c9a897.png
 subtitle: 깃허브 기본 도메인은 지겹다. 사설 도메인을 구매하고 연동해본다

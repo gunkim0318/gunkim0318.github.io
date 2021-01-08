@@ -1,7 +1,7 @@
 ---
 
 title: 스프링 부트에서 Mysql 및 마이바티스를 설정하는 법
-category: Spring
+# category:Spring
 image: https://user-images.githubusercontent.com/45007556/103108226-2fb83f80-4689-11eb-8b48-e44e8c043605.png
 tags: ['Spring Boot']
 subtitle: Spring Boot에서 Mysql&MyBatis를 세팅해보자

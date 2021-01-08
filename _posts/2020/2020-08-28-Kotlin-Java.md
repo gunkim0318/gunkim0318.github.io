@@ -1,7 +1,7 @@
 ---
 
 title: 코틀린과 자바 비교해보면서 훑어보기
-category: Other
+# category:Other
 tags: [Java, Kotlin]
 date: 2020-08-30-02
 image: https://user-images.githubusercontent.com/45007556/91540311-946ec200-e955-11ea-8391-9b781654bc17.png

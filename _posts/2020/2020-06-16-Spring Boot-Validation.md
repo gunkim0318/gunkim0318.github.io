@@ -1,7 +1,7 @@
 ---
 
 title: 스프링 부트 유효성(Validation) 검증하기
-category: Spring
+# category:Spring
 tag: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91046786-01cbdb80-e654-11ea-9f51-52887974386e.png
 subtitle: 데이터의 유효성 검증을 위해 노가다는 이제 그만! Validation을 통한 검증 방법을 알아보자

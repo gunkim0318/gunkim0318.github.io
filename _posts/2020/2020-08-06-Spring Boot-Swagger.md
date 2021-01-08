@@ -1,7 +1,7 @@
 ---
 
 title: 스프링 부트 스웨거(Swagger)를 이용하여 REST API문서 자동화하기
-category: Spring
+# category:Spring
 tag: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91055366-86702700-e65f-11ea-828c-795ba0452b3e.png
 subtitle: API문서는 만드는 것도 일이지만 API가 수정될 때마다 수정하는 것도 일이다. API문서 생성 및 수정을 자동화해보자

@@ -1,7 +1,7 @@
 ---
 
 title: 스프링 시큐리티 정리
-category: Spring
+# category:Spring
 tag: [Spring Boot, Spring Security]
 image: https://user-images.githubusercontent.com/45007556/91024296-b6550580-e632-11ea-874f-8618094b21e5.png
 subtitle: 스프링 시큐리티의 개념을 매번 찾아보기 번거롭다. 한 곳에 모두 정리해본다

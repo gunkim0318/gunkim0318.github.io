@@ -1,7 +1,7 @@
 ---
 
 title: "Jekyll 'Invalid Markdown processor given: redcarpet' 에러"
-category: Error Log
+# category:Error Log
 tags: [Jekyll]
 image: https://user-images.githubusercontent.com/45007556/103326178-75fb0d80-4a92-11eb-983c-dbd6adc70b15.png
 excerpt_separator: <!--break-->

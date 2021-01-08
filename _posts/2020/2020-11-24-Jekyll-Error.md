@@ -1,7 +1,7 @@
 ---
 
 title: Jekyll 하위 버전 실행 시 오류
-category: Error Log
+# category:Error Log
 tags: [Jekyll]
 image: https://user-images.githubusercontent.com/45007556/103326178-75fb0d80-4a92-11eb-983c-dbd6adc70b15.png
 subtitle: Jekyll 버전 호환성 오류에 대한 해결 방법을 알아보자

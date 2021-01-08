@@ -1,7 +1,7 @@
 ---
 
 title: ECMAScript? ES? 그게 뭘까?
-category: JavaScript
+# category:JavaScript
 tags: [JavaScript]
 image: https://user-images.githubusercontent.com/45007556/99826279-7c48c080-2b9b-11eb-8cce-3c92f971c803.png
 subtitle: JavaScript는 뭐고 ECMAScript는 뭘까? 이에 대해서 정리해본다

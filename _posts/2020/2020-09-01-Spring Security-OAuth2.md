@@ -1,7 +1,7 @@
 ---
 
 title: OAuth2 연동을 위한 카카오, 구글, 페이스북, 네이버, 깃허브 클라이언트 ID 및 암호키 발급 방법 정리
-category: Spring
+# category:Spring
 tags: [Spring Boot]
 image: https://user-images.githubusercontent.com/45007556/91691565-cde83d00-eba2-11ea-9170-3f80328dcc36.png
 subtitle: 소셜 로그인을 위한 OAuth2 정보를 발급해보자

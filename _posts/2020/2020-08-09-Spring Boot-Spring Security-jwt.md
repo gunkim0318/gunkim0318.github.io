@@ -1,7 +1,7 @@
 ---
 
 title: 스프링 부트(Spring Boot) + 스프링 시큐리티(Spring Security) + JWT(Json Web Token) 연동하기
-category: Spring
+# category:Spring
 tag: [Spring Boot, Spring Security, Jwt]
 image: https://user-images.githubusercontent.com/45007556/91056380-e0252100-e660-11ea-8e46-241b38268250.png
 subtitle: 스프링 시큐리티에서 JWT를 발급하여 로그인을 해보자

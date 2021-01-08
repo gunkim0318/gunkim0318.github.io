@@ -1,7 +1,7 @@
 ---
 
 title: 스프링 HikariCP를 이용한 커넥션 풀 사용하기
-category: Spring
+# category:Spring
 tag: [Spring]
 image: https://user-images.githubusercontent.com/45007556/103328175-0e958b80-4a9b-11eb-9db7-66230e0f057c.png
 subtitle: 커넥션 풀 중에서 가장 빠른 HikariCP를 사용해서 DB 부하를 줄여보자
