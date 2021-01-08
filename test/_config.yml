@@ -206,6 +206,7 @@ defaults:
       path: ""
       type: posts
     values:
+      key: anything
       layout: article
       sharing: true
       license: true
