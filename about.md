@@ -24,7 +24,7 @@ titles:
   fr-LU   : *FR
 key: page-about
 show_title: false
-permalinks: ["/about", "/about/"]
+permalink: /about/
 ---
 # GunKim
 안녕하세요. 고등학교 2학년 때 처음 Java로 프로그래밍에 입문해서 현재도 꾸준히 공부 중 입니다.  
