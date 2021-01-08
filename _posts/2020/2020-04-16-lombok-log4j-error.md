@@ -3,7 +3,7 @@
 title: 스프링 메이븐에서 @Log4j 사용 시 오류
 # category:Error Log
 tag: [Spring]
-image: https://user-images.githubusercontent.com/45007556/91044098-b31c4280-e64f-11ea-9d85-4c4c7366a3a9.png
+header-image: https://user-images.githubusercontent.com/45007556/91044098-b31c4280-e64f-11ea-9d85-4c4c7366a3a9.png
 subtitle: 이클립스에서 메이븐을 사용 시 @Log4j 에러가 나는 문제를 해결해 보자
 ---
 # 문제

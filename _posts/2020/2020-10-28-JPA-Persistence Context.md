@@ -3,7 +3,7 @@
 title: JPA 영속성(Persistence) 정리
 # category:Spring
 tags: [Jpa, Java]
-image: https://user-images.githubusercontent.com/45007556/97259497-3e879f00-185e-11eb-9fe2-688c9012a85b.png
+header-image: https://user-images.githubusercontent.com/45007556/97259497-3e879f00-185e-11eb-9fe2-688c9012a85b.png
 subtitle: 하이버네이트에서 가장 중요한 개념 영속성에 대해서 알아보자
 ---
 

@@ -3,7 +3,7 @@
 title: JPA 영속성 전이와 고아 객체(orphan)
 # category:Spring
 tags: [Jpa]
-image: https://user-images.githubusercontent.com/45007556/103327917-04bf5880-4a9a-11eb-8610-c88a74f619bc.png
+header-image: https://user-images.githubusercontent.com/45007556/103327917-04bf5880-4a9a-11eb-8610-c88a74f619bc.png
 subtitle: 전이? 고아? 헷갈리는 개념에 대해서 정리해본다
 ---
 

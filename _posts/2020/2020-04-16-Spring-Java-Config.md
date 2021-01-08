@@ -3,7 +3,7 @@
 title: 스프링을 자바로 설정하기
 # category:Spring
 tag: [Spring]
-image: https://user-images.githubusercontent.com/45007556/103328175-0e958b80-4a9b-11eb-9db7-66230e0f057c.png
+header-image: https://user-images.githubusercontent.com/45007556/103328175-0e958b80-4a9b-11eb-9db7-66230e0f057c.png
 subtitle: 매번 XML 설정은 지겹다. Java로 설정해보자
 ---
 

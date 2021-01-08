@@ -3,7 +3,7 @@
 title: 스프링 부트(Spring Boot)+리액트(React) 함께 빌드하기
 # category:Spring
 tag: [Spring Boot, React]
-image: https://user-images.githubusercontent.com/45007556/91056894-7d805500-e661-11ea-994d-e8a0f3cb16b9.png
+header-image: https://user-images.githubusercontent.com/45007556/91056894-7d805500-e661-11ea-994d-e8a0f3cb16b9.png
 subtitle: 매번 서버 두 개를 기동하기 귀찮다. 한번의 두 서버를 모두 기동하자
 ---
 항상 스프링 부트+리액트 개발할 때 스프링 부트 서버(8080) 실행하고, 리액트 서버(3000)을 실행해서 프록시 설정을 통해 통신을 했었는데, 항상 두번씩 실행해야 해서 번거롭기도 해서 한번에 빌드하는 방법을 정리해보려고 한다. [예제 프로젝트](https://github.com/gunkim0318/springboot-react-example)

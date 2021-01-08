@@ -3,7 +3,7 @@
 title: Debian Linux Gradle 최신 버전 설치하기
 # category:Other
 tags: ['Linux', 'Gradle']
-image: https://user-images.githubusercontent.com/45007556/103326060-071db480-4a92-11eb-8f14-b63d669bfb96.png
+header-image: https://user-images.githubusercontent.com/45007556/103326060-071db480-4a92-11eb-8f14-b63d669bfb96.png
 subtitle: 데비안 리눅스에서 Gradle을 최신 버전을 설치해보자
 ---
 apt-get을 통해 설치한 Gradle 버전이 4.4.1 버전이라 5버전 이상의 최신버전이 필요했기에 Gradle 최신 버전으로 설치하는 방법을 적어보려 한다.
