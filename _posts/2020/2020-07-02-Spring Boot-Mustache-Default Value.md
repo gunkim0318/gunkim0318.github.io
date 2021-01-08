@@ -10,7 +10,6 @@ subtitle: Mustache 사용 시 값이 없을 시 자꾸 오류를 뱉어낸다. �
 {% raw %}
 Mustache를 더 잘쓰고 싶어서 Mustache 관련 사이트를 뒤지던 중 원하던 기능을 발견해서 정리해보려고 한다.
 
-![image](https://user-images.githubusercontent.com/45007556/91050518-bd433e80-e659-11ea-883c-35c397a8a260.png)
 우선 Mustache에서 이렇게 사용할 때만약 값이 없을 경우 아래처럼 메소드 또는 필드가 없다는 에러가 발생한다.
 
 ```
