@@ -34,11 +34,11 @@ timezone: Asia/Seoul # see https://en.wikipedia.org/wiki/List_of_tz_database_tim
 ## => Author and Social
 ##############################
 author:
-  type      : # "person" (default), "organization"
+  type      : person
   name      : KimChong
-  url       :
-  avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
+  url       : https://gunlog.dev
+  avatar    : https://avatars2.githubusercontent.com/u/45007556?s=460&u=72b080b6b8aaecd3820634f838fac329af7dbea7&v=4
+  bio       : 🙋‍♂️Hello!
   email     : gunkim0318@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
