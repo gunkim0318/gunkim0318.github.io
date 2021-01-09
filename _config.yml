@@ -28,7 +28,7 @@ description: > # this means to ignore newlines until "Language & timezone"
 ## => Language and Timezone
 ##############################
 lang: ko # the language of your site, default as "en"
-timezone: Asia/Seoul # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone:  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
@@ -69,14 +69,13 @@ paths:
 
 
 ## => Post
-##############################
-## excerpt
+## 본문 요약문 구분자
 excerpt_separator: <!--more-->
 
-## license
+## 라이센스 종류
 license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 
-## TOC
+## 목차 설정
 toc:
   selectors: # "h1,h2,h3" (default)
 
@@ -201,6 +200,7 @@ exclude:
   - /test
   - /vendor
 
+## 본문 기본 옵션
 defaults:
   - scope:
       path: ""
@@ -210,7 +210,7 @@ defaults:
       sharing: true
       license: false
       aside:
-        toc: true
+        toc: true # 목차 여부
       show_edit_on_github: true
       key: anything
       show_subscribe: true
