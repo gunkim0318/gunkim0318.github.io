@@ -268,7 +268,7 @@ public class AsyncLoginAuthenticationSuccessHandler implements AuthenticationSuc
 
 # JWT Token 인증(로그인 확인) 처리 대략적인 흐름
 
-![image](https://user-images.githubusercontent.com/45007556/91056428-eddaa680-e660-11ea-9e11-8f9dc46fecf0.png)
+![image](https://user-images.githubusercontent.com/45007556/104460703-c5dce700-55f1-11eb-8931-991164f48a52.png)
 
 ## Filter 작성
 
