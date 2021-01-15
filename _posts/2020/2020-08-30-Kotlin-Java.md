@@ -336,6 +336,22 @@ class Human(var name:String, var age: Int){
 
 **주 생성자 -> init 블록 -> 부 생성자**
 
+## 빌더패턴처럼 사용할 수 있다
+생성자 변수 주입 시 변수명을 지정해줄 수 있다. 이렇게 사용하면 빌더 패턴을 사용하는 것과 같은 효과를 볼 수 있다.
+```java
+class User(
+    var name: String,
+    var email: String?,
+    var age: Int
+)
+```
+```java
+val user = User(
+    name="gunkim",
+    email="gunkim0318@gmail.com",
+    age=10
+)
+```
 # Getter, Setter 생성
 
 자바에서는 Getter, Setter을 아래와 같이 생성한다.
