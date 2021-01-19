@@ -2,6 +2,9 @@
 
 {%- assign _excerpt_type = include.excerpt_type -%}
 
+{%- include snippets/get-locale-string.html key='READMORE' -%}
+{%- assign _locale_readmore = __return -%}
+
 {%- assign _sorted_list = include.articles -%}
 {%- if include.group_by == 'year' -%}
   {%- assign _sorted_list = _sorted_list | sort: 'date' -%}
@@ -56,8 +59,10 @@
           <div class="item__description">
             {%- if _article.excerpt and include.show_excerpt -%}
               <div class="article__content" itemprop="description articleBody">
-                {%- if _article.subtitle -%}
-                  {{ _article.subtitle }}
+                {%- if _excerpt_type == 'html' -%}
+                  {{ _article.excerpt }}
+                {%- else -%}
+                  {{ _article.excerpt | strip_html | strip | truncate: _excerpt_truncate }}
                 {%- endif -%}
               </div>
             {%- endif -%}
@@ -135,5 +140,4 @@
       {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
-
 </div>
