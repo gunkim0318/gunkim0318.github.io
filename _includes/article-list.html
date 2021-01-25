@@ -66,6 +66,12 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
+            <!--서브제목-->
+            <!--서브 제목. 이 부분은 나중에 옵션으로 관리되도록 수정해야 할 듯...-->
+            <div class="article__content" itemprop="description articleBody">
+              {{ _article.subtitle }}
+            </div>
+
             {%- if include.show_readmore -%}
               <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
             {%- endif -%}
