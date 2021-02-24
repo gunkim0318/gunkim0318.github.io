@@ -1,9 +1,9 @@
 ---
-
+layout: post
 title: Java Byte<->String 변환 방법 및 바이트로 자르기
-# category:Java
+category: Java
 tags: [Java]
-header-image: https://user-images.githubusercontent.com/45007556/103327958-30424300-4a9a-11eb-810d-70513ba86130.png
+image: https://user-images.githubusercontent.com/45007556/103327958-30424300-4a9a-11eb-810d-70513ba86130.png
 subtitle: 문자열을 바이트수로 자르는 방법에 대해서 알아본다
 ---
 

@@ -1,9 +1,9 @@
 ---
-
+layout: post
 title: JPA 양방향 연관관계 나름 정리
-# category:Spring
+category: Spring
 tags: [Java, Jpa]
-header-image: https://user-images.githubusercontent.com/45007556/94286367-de1bee00-ff8f-11ea-92a1-b1afe192b5bf.png
+image: https://user-images.githubusercontent.com/45007556/94286367-de1bee00-ff8f-11ea-92a1-b1afe192b5bf.png
 subtitle: 양방향 연관관계에서 어느 쪽에 어떤 관계를 주어야 하는 지 헷갈린다. 이를 정리해본다
 ---
 

@@ -1,9 +1,9 @@
 ---
-
+layout: post
 title: OAuth2 연동을 위한 카카오, 구글, 페이스북, 네이버, 깃허브 클라이언트 ID 및 암호키 발급 방법 정리
-# category:Spring
+category: Spring
 tags: [Spring Boot]
-header-image: https://user-images.githubusercontent.com/45007556/91691565-cde83d00-eba2-11ea-9170-3f80328dcc36.png
+image: https://user-images.githubusercontent.com/45007556/91691565-cde83d00-eba2-11ea-9170-3f80328dcc36.png
 subtitle: 소셜 로그인을 위한 OAuth2 정보를 발급해보자
 ---
 
@@ -40,7 +40,6 @@ subtitle: 소셜 로그인을 위한 OAuth2 정보를 발급해보자
 제품 설정>카카오 로그인>보안에서 암호키를 확인할 수 있다.
 ![image](https://user-images.githubusercontent.com/45007556/91869211-8fd93f00-ecb0-11ea-8e44-db923bf62bb0.png)
 
-
 # 구글
 
 [구글 API 페이지](https://console.developers.google.com/projectcreate?previousPage=%2Fprojectselector2%2Fapis%2Fdashboard%3ForganizationId%3D0%26supportedpurview%3Dproject&project=&folder=&organizationId=0&supportedpurview=project)로 이동
@@ -70,7 +69,6 @@ subtitle: 소셜 로그인을 위한 OAuth2 정보를 발급해보자
 
 ![image](https://user-images.githubusercontent.com/45007556/91869032-5b658300-ecb0-11ea-8375-200107e22a08.png)
 
-
 ## 6. OAuth 인증 정보 확인
 
 OAuth2 인증을 위한 클라이언트 ID, 보안 비밀번호 확인
@@ -99,7 +97,6 @@ OAuth2 인증을 위한 클라이언트 ID, 보안 비밀번호 확인
 
 OAuth2 인증을 위한 앱 ID, 앱 시크릿 코드(보기 클릭)를 확인
 ![image](https://user-images.githubusercontent.com/45007556/91869378-c6af5500-ecb0-11ea-82d7-f4a03330e0f4.png)
-
 
 # 네이버
 

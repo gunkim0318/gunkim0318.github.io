@@ -1,226 +1,57 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-#
-# ,--------.      ,--.   ,--. ,--.
-# '--.  .--',---.  \  `.'  /,-'  '-.
-#    |  |  | .-. :  .'    \ '-.  .-'
-#    |  |  \   --. /  .'.  \  |  |
-#    `--'   `----''--'   '--' `--'
+title: Gunlog
+description: Flexton is a responsive and ultra-minimal theme for Jekyll.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "gunlog.dev" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Author
+author-name: Gun Kim
+author-image: https://avatars.githubusercontent.com/u/45007556?s=460&u=72b080b6b8aaecd3820634f838fac329af7dbea7&v=4
+author-job: Web Developer
+author-email: gunkim.dev@gmail.com # Add your email for contant form.
+# author-twitter: artemsheludko_ # Add your twitter account
+about-author: 안녕하세요. 웹 개발에 관심있는 개발자입니다. 저는 새로운 것을 배우는 것을 즐기고, 알고있는 내용들을 정제하기 위해서 블로그를 시작했습니다. 때문에 틀린 내용이 있다면 언제든지 의견 부탁드립니다.
 
+# Social settings
+# social-twitter: artemsheludko_
+# social-facebook:
+social-github: kanpann
+# social-pinterest: artemsheludko
+# social-instagram: artemsheludko_
+# social-youtube:
+# social-vk:
+# social-linkedin:
 
+# Google Analytics
+google-analytics: G-BW9XB9YM0F
 
-## => Site Settings
-##############################
-text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: tomorrow-night-bright # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://gunlog.dev # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : # does not include hostname
-title   : Gunkim 기술 블로그
-description: > # this means to ignore newlines until "Language & timezone"
-  개발 관련한 포스팅을 하는 블로그입니다.
+# Comment Section
+# disqus-identifier: mr-brown # Add your shortname for Disqus Comment. For example mr-brown
+# Gitalk
+gitalk:
+  clientID: 950a9f1473b04652cbc0 # GitHub Application Client ID
+  clientSecret: 6b42fe4d369ba3a4918c0b629b35115111fb33ac # GitHub Application Client Secret
+  repository: blog-gitalk # GitHub repo
+  owner: kanpann # GitHub repo owner
+  admin: kanpann
 
+# Build settings
+markdown: kramdown
+permalink: /:title/
+plugins:
+  - jekyll-paginate
 
-## => Language and Timezone
-##############################
-lang: ko # the language of your site, default as "en"
-timezone:  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+paginate: 7
+paginate_path: "/page/:num/"
 
+include:
+  - _pages
 
-## => Author and Social
-##############################
-author:
-  type      : person
-  name      : KimChong
-  url       : https://gunlog.dev
-  avatar    : https://avatars2.githubusercontent.com/u/45007556?s=460&u=72b080b6b8aaecd3820634f838fac329af7dbea7&v=4
-  bio       : 🙋‍♂️Hello!
-  email     : gunkim0318@gmail.com
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
-  googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
-  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-  medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : gunkim0318 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
-  npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+sass:
+  sass_dir: _sass
+  style: compressed
 
-
-## => GitHub Repository (if the site is hosted by GitHub)
-##############################
-repository: gunkim0318/gunkim0318.github.io
-repository_tree: master
-
-
-## => Paths
-##############################
-paths:
-  root    : # title link url, "/" (default)
-  home    : # home layout url, "/" (default)
-  archive : # "/archive.html" (default)
-  rss     : # "/feed.xml" (default)
-
-
-## => Post
-## 본문 요약문 구분자
-excerpt_separator: <!--more-->
-
-## 라이센스 종류
-license: CC-BY-NC-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
-
-## 목차 설정
-toc:
-  selectors: # "h1,h2,h3" (default)
-
-
-## => Markdown Enhancements
-##############################
-## Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
-
-## Mermaid
-mermaid: # false (default), true
-
-## Chart
-chart: # false (default), true
-
-
-## => Paginate
-##############################
-paginate: 8
-paginate_path: /page:num # don't change this unless for special need
-
-
-## => Sources
-##############################
-sources: # bootcdn (default), unpkg
-
-
-## => Sharing
-##############################
-sharing:
-  provider: false # false (default), "addtoany", "addthis", "custom"
-
-  ## AddThis
-  addthis:
-    id: # AddThis pubid, e.g. ra-5xxxxxxxxxxx
-
-
-## => Comments
-##############################
-comments:
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
-
-  ## Disqus
-  disqus:
-    shortname: gunkim # the Disqus shortname for the site
-
-  ## Gitalk
-  # please refer to https://github.com/gitalk/gitalk for more info.
-  gitalk:
-    clientID    : 35d76b14c7d4fe29c02c # GitHub Application Client ID
-    clientSecret: 2ee07b52c6dcd45e313c2fff77f97cbec9cd3ab8 # GitHub Application Client Secret
-    repository  : gunkim0318.github.io # GitHub repo
-    owner       : gunkim0318 # GitHub repo owner
-    admin: gunkim0318 # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
-
-  ## Valine
-  # please refer to https://valine.js.org/en/ for more info.
-  valine:
-    app_id      : # LeanCloud App id
-    app_key     : # LeanCloud App key
-    placeholder : # Prompt information
-    visitor     : # false (default)
-    meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
-
-
-## => Pageview
-##############################
-pageview:
-  provider: false # false (default), "leancloud", "custom"
-
-  ## Leancloud
-  leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
-
-
-## => Search
-##############################
-search:
-  provider: default # "default" (default), false, "google", "custom"
-
-  ## Google Custom Search Engine
-  google:
-    custom_search_engine_id: # Google Custom Search Engine ID
-
-
-## => Analytics
-##############################
-analytics:
-  provider: google # false (default), "google", "custom"
-
-  ## Google Analytics
-  google:
-    tracking_id : G-BW9XB9YM0F # Google Analytics id for the site
-    anonymize_ip: true # Anonymize IP tracking for Analytics
-
-
-## => Build
-##############################
-markdown    : kramdown
-highlighter : rouge
-permalink   : /:title/
-
+# Exclude from processing.
 exclude:
-  - CHANGELOG.md
-  - HOW_TO_RELEASE.md
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - README-*.md
-  - README.md
-  - gulpfile.js
-  - jekyll-text-theme.gemspec
-  - package-lock.json
-  - package.json
-  - /docs
-  - /node_modules
-  - /screenshots
-  - /test
-  - /vendor
-
-## 본문 기본 옵션
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: article
-      sharing: true
-      license: false
-      aside:
-        toc: true # 목차 여부
-      show_edit_on_github: true
-      key: anything
-      show_subscribe: true
-      pageview: true
-
-
-## => Plugins
-##############################
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jemoji
+  - vendor

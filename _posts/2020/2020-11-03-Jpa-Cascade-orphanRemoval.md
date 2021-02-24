@@ -1,9 +1,9 @@
 ---
-
+layout: post
 title: JPA 영속성 전이와 고아 객체(orphan)
-# category:Spring
+category: Spring
 tags: [Jpa]
-header-image: https://user-images.githubusercontent.com/45007556/103327917-04bf5880-4a9a-11eb-8610-c88a74f619bc.png
+image: https://user-images.githubusercontent.com/45007556/103327917-04bf5880-4a9a-11eb-8610-c88a74f619bc.png
 subtitle: 전이? 고아? 헷갈리는 개념에 대해서 정리해본다
 ---
 
@@ -114,6 +114,7 @@ userRepository.save(user); //user, posts persist
 부모 엔티티와 관계가 끊어진 자식 엔티티를 **고아 객체**라고 한다.
 
 ## **orphanRemoval=true**옵션
+
 ```java
 @Entity
 public class User{
@@ -122,23 +123,38 @@ public class User{
     List<Posts> postsList = ArrayList<Posts>();
 }
 ```
+
 만약 부모 엔티티와의 관계가 끊어진 고아 객체가 자동으로 삭제되게 하고 싶을 때 사용하는 옵션인데 **orphanRemoval=true**만 추가해주면 자동으로 고아 객체를 삭제해준다.
+
 ## CascadeType.REMOVE vs orphanRemoval=true
-영속성 전이 REMOVE 옵션은 부모 엔티티가 삭제되었을 때 자식 엔티티를 삭제하는데, 대충 설명을 읽어보면 고아객체 삭제 옵션이랑 유사하다.  
-### 공통점 
-**부모 엔티티를 삭제한다 -> 자식 엔티티를 삭제한다.**  
+
+영속성 전이 REMOVE 옵션은 부모 엔티티가 삭제되었을 때 자식 엔티티를 삭제하는데, 대충 설명을 읽어보면 고아객체 삭제 옵션이랑 유사하다.
+
+### 공통점
+
+**부모 엔티티를 삭제한다 -> 자식 엔티티를 삭제한다.**
+
 ### 차이점
+
 #### CascadeType.REMOVE
+
 부모 엔티티가 삭제될 경우 **자식 엔티티**를 삭제해라
+
 #### orphanRemoval=true
+
 부모 엔티티가 삭제될 경우를 관계가 끊어진 **고아 객체**를 삭제해라
+
 ### 결론
+
 결국 어떻게 보면 영속성 전이 REMOVE 옵션은 고아 객체 삭제 옵션의 부분집합이라고도 볼 수 있을 것 같다.
-##  고아 객체를 만드는 방법
+
+## 고아 객체를 만드는 방법
+
 ```java
 User user = userRepository.findAll().get(0);
 user.postsList.clear();
 ```
+
 User(부모)엔티티에서 Posts(자식) 엔티티와의 관계를 끊어 주었다. 이렇게 자연히 Posts(자식) 엔티티는 고아 객체가 되어 자동으로 삭제(delete)된다. 추가로 User(부모) 엔티티가 삭제될 경우에도 관계가 끊어진다.
 
 ## +**orphanRemoval=true**를 사용하려면 CascadeType.REMOVE를 같이 사용해야 한다?

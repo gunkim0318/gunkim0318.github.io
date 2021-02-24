@@ -1,9 +1,9 @@
 ---
-
+layout: post
 title: 리액트 초보의 컴포넌트에 대한 고민(feat.디자인 패턴)
-# category:JavaScript
+category: JavaScript
 tags: [React]
-header-image: https://user-images.githubusercontent.com/45007556/95151526-d6491e80-07c5-11eb-9388-5fd48280d712.png
+image: https://user-images.githubusercontent.com/45007556/95151526-d6491e80-07c5-11eb-9388-5fd48280d712.png
 subtitle: 코드 작성보다 컴포넌트를 만드는 게 더 어렵다. 컴포넌트를 똑똑하게 만드는 방법에 대해서 고민해본다
 ---
 

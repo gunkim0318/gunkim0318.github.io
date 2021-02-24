@@ -1,9 +1,9 @@
 ---
-
+layout: post
 title: 스프링 부트 Mustache에서 유효성 검사하기(Validation)
-# category:Spring
+category: Spring
 tag: [Spring Boot]
-header-image: https://user-images.githubusercontent.com/45007556/91050124-2bd3cc80-e659-11ea-84bd-798ff4fcd272.png
+image: https://user-images.githubusercontent.com/45007556/91050124-2bd3cc80-e659-11ea-84bd-798ff4fcd272.png
 subtitle: Logic-Less인 Mustache에서는 Validation을 어떻게 사용해야 할까? 그 방법에 대해 알아보자
 ---
 

@@ -1,11 +1,12 @@
 ---
-
+layout: post
 title: 스프링 부트 - 스프링 시큐리티 간단 커스텀
-# category:Spring
+category: Spring
 tag: [Spring Boot, Spring Security]
-header-image: https://user-images.githubusercontent.com/45007556/91045190-76e9e180-e651-11ea-9bea-7a4aa69564c8.png
+image: https://user-images.githubusercontent.com/45007556/91045190-76e9e180-e651-11ea-9bea-7a4aa69564c8.png
 subtitle: 스프링 시큐리티를 간단하게 커스텀해서 사용하자
 ---
+
 일반적으로 스프링 시큐리티를 사용할 때 간단하게 커스텀해서 사용하는 방법에 대해서 포스팅하려고 한다.
 
 # 스프링 시큐리티 흐름

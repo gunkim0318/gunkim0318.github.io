@@ -1,14 +1,16 @@
 ---
-
+layout: post
 title: Jekyll 하위 버전 실행 시 오류
-# category:Error Log
+category: Error Log
 tags: [Jekyll]
-header-image: https://user-images.githubusercontent.com/45007556/103326178-75fb0d80-4a92-11eb-983c-dbd6adc70b15.png
+image: https://user-images.githubusercontent.com/45007556/103326178-75fb0d80-4a92-11eb-983c-dbd6adc70b15.png
 subtitle: Jekyll 버전 호환성 오류에 대한 해결 방법을 알아보자
 ---
+
 지킬 테마를 다운 받아서 실행할 때 간혹 지킬 버전 호환성 때문에 오류가 날 때가 있는데, 그럴 때마다 찾아보기 귀찮아서 정리해놓음.
 
 # 문제 상황
+
 ```bash
 gimgeon-ui-MacBook-Pro:kross-jekyll-master gunkim$ jekyll server
 Traceback (most recent call last):
@@ -26,6 +28,8 @@ Traceback (most recent call last):
 	 1: from /Users/gunkim/.gem/ruby/2.7.0/gems/bundler-2.1.4/lib/bundler/spec_set.rb:80:in `map!'
 /Users/gunkim/.gem/ruby/2.7.0/gems/bundler-2.1.4/lib/bundler/spec_set.rb:86:in `block in materialize': Could not find public_suffix-4.0.5 in any of the sources (Bundler::GemNotFound)
 ```
+
 # 해결 방법
+
 1. 지킬 프로젝트 내 Gemfile.lock 파일 삭제
 2. 터미널에서 **bundle install** 명령어 실행

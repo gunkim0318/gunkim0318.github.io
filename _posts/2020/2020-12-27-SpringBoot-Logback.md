@@ -1,22 +1,28 @@
 ---
-
+layout: post
 title: 스프링 부트에서 logback 설정하기
-# category:Spring
-tags: ['Spring Boot']
-header-image: https://user-images.githubusercontent.com/45007556/103150641-815fe780-47b9-11eb-955d-9c2ba03264a8.png
+category: Spring
+tags: ["Spring Boot"]
+image: https://user-images.githubusercontent.com/45007556/103150641-815fe780-47b9-11eb-955d-9c2ba03264a8.png
 subtitle: 콘솔에 찍히는 DB 로그를 예쁘게 찍어보자
 ---
+
 스프링 부트에 마이바티스를 설정하면서 로그를 이쁘게 찍으려고 logback 설정했던 방법에 대해서 정리하려고 한다.
 
 # 프로젝트를 받아주자
+
 git bash가 깔려 있다면 아래 명령어를 사용해 logback 설정해볼 [예제 프로젝트](https://github.com/gunkim0318/SpringBoot-Mysql-MyBatis-Logback-Sample/tree/mysql-mybatis)를 받아주자. 만약 이미 프로젝트가 있다면 생략해도 된다.
+
 ```bash
 git clone -b mysql-mybatis --single-branch https://github.com/gunkim0318/SpringBoot-Mysql-MyBatis-Logback-Sample.git
 ```
 
 # 의존성 추가하기
+
 logback 설정을 위한 의존성을 추가해주어야 한다. 예제 프로젝트를 받았다면 Gradle프로젝트이기 때문에 Gradle 의존성을 추가해주자.
+
 ## Maven
+
 ```xml
 <dependency>
     <groupId>org.bgee.log4jdbc-log4j2</groupId>
@@ -24,19 +30,26 @@ logback 설정을 위한 의존성을 추가해주어야 한다. 예제 프로�
     <version>1.16</version>
 </dependency>
 ```
+
 ## Gradle
+
 ```java
 implementation group: 'org.bgee.log4jdbc-log4j2', name: 'log4jdbc-log4j2-jdbc4.1', version: '1.16'
 ```
 
 # 파일 생성하기
+
 **/src/main/resources/** 경로에 파일 두개를 생성해주자.
-## *log4jdbc.log4j2.properties*
+
+## _log4jdbc.log4j2.properties_
+
 ```properties
 log4jdbc.spylogdelegator.name=net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
 log4jdbc.dump.sql.maxlinelength=0
 ```
-## *logback-spring.xml*
+
+## _logback-spring.xml_
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -80,9 +93,12 @@ log4jdbc.dump.sql.maxlinelength=0
     <logger name="jdbc.connection" level="OFF"/>
 </configuration>
 ```
+
 # 결과 확인하기
+
 해당 테스트를 실행해보면 쿼리 결과가 보기 좋게 콘솔에 찍히는 것을 확인할 수 있다.
-***/src/test/com/sample/app/dao/TestDaoTest.java***
+**_/src/test/com/sample/app/dao/TestDaoTest.java_**
+
 ```java
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -97,4 +113,5 @@ public class TestDaoTest {
     }
 }
 ```
+
 ![이미지](https://user-images.githubusercontent.com/45007556/103171389-32848180-488f-11eb-85c5-e0144ebf6a28.png)
