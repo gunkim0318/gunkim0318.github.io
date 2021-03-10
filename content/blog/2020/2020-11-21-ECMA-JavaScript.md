@@ -1,5 +1,5 @@
-<!-- ---
-date: '2020-11-21'
+---
+date: "2020-11-21"
 draft: false
 title: ECMAScript? ES? 그게 뭘까?
 category: JavaScript
@@ -70,4 +70,4 @@ es6를 지원하지 않으면 es6 이하 버전 문법들만을 사용해서 개
 
 ![1_DGJT51DxMSbsRNuF6J_c6Q](https://user-images.githubusercontent.com/45007556/99864982-e5572500-2be9-11eb-8d57-06e5cccaae37.jpeg)
 
-그래서 이를 해결하기 위해 나온 방법이 컴파일러 및 트랜스파일러의 역할을 하는 바벨(Babel)을 이용해서 es6로 작성된 코드를 es5로 변환해서 배포하는 방법이다. -->
+그래서 이를 해결하기 위해 나온 방법이 컴파일러 및 트랜스파일러의 역할을 하는 바벨(Babel)을 이용해서 es6로 작성된 코드를 es5로 변환해서 배포하는 방법이다.
