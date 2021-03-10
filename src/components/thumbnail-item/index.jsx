@@ -7,7 +7,7 @@ import "./index.scss";
 export const ThumbnailItem = ({ node }) => (
   <Link
     className={`thumbnail ${TARGET_CLASS}`}
-    to={node.frontmatter.title.substr(17)}
+    to={node.fields.slug.substr(17)}
   >
     <div key={node.fields.slug}>
       <h3>{node.frontmatter.title || node.fields.slug}</h3>
