@@ -4,7 +4,6 @@ draft: false
 title: 코틀린과 자바 비교해보면서 훑어보기
 category: Other
 tags: [Java, Kotlin]
-date: 2020-08-30-02
 image: https://user-images.githubusercontent.com/45007556/91540311-946ec200-e955-11ea-8391-9b781654bc17.png
 subtitle: 자바와 100% 상호호환이 가능한 코틀린. 간단하게 살펴보자
 ---
