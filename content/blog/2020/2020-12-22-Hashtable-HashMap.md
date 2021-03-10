@@ -1,4 +1,4 @@
----
+<!-- ---
 date: '2020-12-22'
 draft: false
 title: Hashtable과 HashMap는 무슨 차이일까?
@@ -72,4 +72,4 @@ Hashtable이 동기화를 지원해주는 이유는 메소드에 붙은 synchron
 
 # HashMap과 Hashtable 어떨 때 사용할까?
 
-동기화 처리가 필요할 경우 Hashtable, 동기화 처리가 필요 없을 경우 HashMap을 사용하면 될 것 같다.
+동기화 처리가 필요할 경우 Hashtable, 동기화 처리가 필요 없을 경우 HashMap을 사용하면 될 것 같다. -->
