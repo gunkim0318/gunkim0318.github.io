@@ -1,13 +1,11 @@
 ---
-title: 'about'
-date: 2019-1-27 16:21:13
-lang: 'en'
+title: "about"
+date: 2021-03-14
+lang: "en"
 ---
 
-# Your name
+# Gun Kim
 
 <div align="center">
-
-_Thank you for reading my resume. If you want to contact me, Please send me an email._
-
+대충 자기소개가 들어갈 공간
 </div>
