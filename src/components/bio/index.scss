@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .bio {
   margin-bottom: 24px;
@@ -6,19 +6,19 @@
   .author-description {
     display: flex;
   }
-
+  .author {
+    text-align: center;
+  }
   .author-image {
     margin-top: 12px;
     margin-right: 12px;
     margin-bottom: 0;
-    min-width: 72px;
+    min-width: 200px;
+    min-height: 200px;
   }
-
-  .author-name-prefix {
-    font-size: 90%;
-    margin-right: 4px;
+  .author-name {
+    margin: 0 auto;
   }
-
   .author-name-content {
     display: inline-block;
     font-size: 95%;
@@ -31,7 +31,6 @@
 
   .author-introduction {
     margin-top: 4px;
-    font-size: 80%;
     line-height: 1.4;
   }
 

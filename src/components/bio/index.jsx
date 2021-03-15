@@ -1,30 +1,29 @@
-import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
+import React from "react";
+import { StaticQuery, graphql, Link } from "gatsby";
+import Image from "gatsby-image";
 
-import './index.scss'
+import "./index.scss";
 
 export const Bio = () => (
   <StaticQuery
     query={bioQuery}
-    render={data => {
-      const { author, social, introduction } = data.site.siteMetadata
+    render={(data) => {
+      const { author, social, introduction } = data.site.siteMetadata;
 
       return (
         <div className="bio">
           <div className="author">
+            <Image
+              className="author-image"
+              fixed={data.avatar.childImageSharp.fixed}
+              alt={author}
+              style={{
+                borderRadius: `100%`,
+              }}
+            />
             <div className="author-description">
-              <Image
-                className="author-image"
-                fixed={data.avatar.childImageSharp.fixed}
-                alt={author}
-                style={{
-                  borderRadius: `100%`,
-                }}
-              />
               <div className="author-name">
-                <span className="author-name-prefix">블로그 주인장</span>
-                <Link to={'/about'} className="author-name-content">
+                <Link to={"/about"} className="author-name-content">
                   <span>@{author}</span>
                 </Link>
                 <div className="author-introduction">{introduction}</div>
@@ -55,10 +54,10 @@ export const Bio = () => (
             </div>
           </div>
         </div>
-      )
+      );
     }}
   />
-)
+);
 
 const bioQuery = graphql`
   query BioQuery {
@@ -83,6 +82,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;
