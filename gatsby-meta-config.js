@@ -6,7 +6,7 @@ module.exports = {
   siteUrl: `https://gunlog.dev`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
-    github: ``, // Your GitHub account
+    github: `kanpann`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
@@ -14,17 +14,17 @@ module.exports = {
   icon: `content/assets/felog.png`, // Add your favicon
   keywords: [`blog`],
   comment: {
-    disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'JaeYeopHan/gatsby-starter-bee', // Your repository for archive comment
+    disqusShortName: "", // Your disqus-short-name. check disqus.com.
+    utterances: "kanpann/https://github.com/kanpann/blog-gitalk.git", // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: 'jbee',
+    buyMeACoffeeId: "jbee",
   },
   share: {
-    facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
+    facebookAppId: "", // Add facebookAppId for using facebook share feature v3.2
   },
-  ga: '0', // Add your google analytics tranking ID
-}
+  ga: "0", // Add your google analytics tranking ID
+};
