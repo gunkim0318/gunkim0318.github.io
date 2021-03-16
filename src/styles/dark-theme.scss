@@ -7,7 +7,9 @@ body.dark {
   .home-header {
     color: $dark-light-font-color;
   }
-
+  .top .link {
+    color: $dark-light-font-color;
+  }
   .bio {
     .author-name-content {
       background-color: $dark-category-border-color;
@@ -34,11 +36,11 @@ body.dark {
       a {
         color: $dark-category-text-color;
       }
-      &[aria-selected='true'] {
+      &[aria-selected="true"] {
         border: 2px solid $dark-category-highlight-border-color;
         font-weight: bolder;
       }
-      &[aria-selected='true'] a {
+      &[aria-selected="true"] a {
         color: $dark-category-highlight-text-color;
       }
     }
