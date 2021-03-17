@@ -20,12 +20,12 @@ const useStyles = makeStyles((theme) => ({
 export const ThumbnailItem = ({ node }) => {
   const classes = useStyles();
   return (
-    <Link
-      className={`thumbnail ${TARGET_CLASS}`}
-      to={node.fields.slug.substr(17)}
-    >
-      <div key={node.fields.slug}>
-        <Grid container spacing={3}>
+    <Grid md={6} xs={12}>
+      <Link
+        className={`thumbnail ${TARGET_CLASS}`}
+        to={node.fields.slug.substr(17)}
+      >
+        <Grid key={node.fields.slug} container spacing={3}>
           <Grid item md={4} xs={12}>
             <img src={node.frontmatter.image} />
           </Grid>
@@ -34,7 +34,7 @@ export const ThumbnailItem = ({ node }) => {
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </Grid>
         </Grid>
-      </div>
-    </Link>
+      </Link>
+    </Grid>
   );
 };
