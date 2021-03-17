@@ -6,6 +6,12 @@
   height: 80px;
   border-bottom: 1px solid #e0dfdf;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0.7;
 
   .link {
     display: inline-block;

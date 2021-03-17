@@ -7,8 +7,12 @@ body.dark {
   .home-header {
     color: $dark-light-font-color;
   }
-  .top .link {
-    color: $dark-light-font-color;
+  .top {
+    background-color: black;
+    border-bottom: 1px solid #525252;
+    .link {
+      color: $dark-light-font-color;
+    }
   }
   .bio {
     .author-name-content {
