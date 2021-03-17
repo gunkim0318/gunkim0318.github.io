@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
-import { Top } from '../components/top'
-import { Header } from '../components/header'
-import { ThemeSwitch } from '../components/theme-switch'
-import { Footer } from '../components/footer'
-import { rhythm } from '../utils/typography'
+import { Top } from "../components/top";
+import { Header } from "../components/header";
+import { ThemeSwitch } from "../components/theme-switch";
+import { Footer } from "../components/footer";
+import { rhythm } from "../utils/typography";
 
-import './index.scss'
+import "./index.scss";
 
 export const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
+  const rootPath = `${__PATH_PREFIX__}/`;
 
   return (
     <React.Fragment>
@@ -18,7 +18,7 @@ export const Layout = ({ location, title, children }) => {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(32),
+          maxWidth: rhythm(50),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
@@ -28,5 +28,5 @@ export const Layout = ({ location, title, children }) => {
         <Footer />
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
