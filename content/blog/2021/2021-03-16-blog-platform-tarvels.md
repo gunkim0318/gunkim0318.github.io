@@ -3,6 +3,7 @@ date: "2021-03-16"
 title: 2년 동안의 블로그 플랫폼 여행기, 그리고 정착
 tags: [Review]
 category: Think
+image: https://user-images.githubusercontent.com/45007556/111398851-7e64fb00-8707-11eb-9833-ff5df1a92042.png
 draft: false
 ---
 
